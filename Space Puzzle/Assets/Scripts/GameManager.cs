@@ -1,55 +1,95 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
+    // score of the player
+    public int score = 0;
+    //high score of the game
+    public int Highscore = 0;
+    //current level
+    public int currentLevel = 1;
+    //how levels there are
+    public int highestLevel = 2;
+    //HUD manager
+    HudManager hudManager;
+    //static instance of the GM can be acessed from anywhere
+    public static GameManager instance;
 
-    public Puzzle puzzlePrefab;
-
-    private List<Puzzle> puzzleList = new List<Puzzle>();
-
-    private Vector2 startPosition = new Vector2(-1.43f, 1.73f);
-    private Vector2 offset = new Vector2(1.1f, 1.1f);
-
-	// Use this for initialization
-	void Start () {
-        SpawnPuzzle(16);
-        SetStartPosition();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-    private void SpawnPuzzle(int number)
+    void Awake()
     {
-        for(int i=0; i<number; i++)
+        //check that it exists
+        if (instance == null)
         {
-            puzzleList.Add(Instantiate(puzzlePrefab, new Vector3(0.0f, 0.0f, 0.0f), Quaternion.identity) as Puzzle);
+            //assign it to the current object
+            instance = this;
         }
-    }
-    void SetStartPosition()
-    {
-        //line 1
-        puzzleList[0].transform.position = new Vector3(startPosition.x, startPosition.y, 0.0f);
-        puzzleList[1].transform.position = new Vector3(startPosition.x + offset.x, startPosition.y, 0.0f);
-        puzzleList[2].transform.position = new Vector3(startPosition.x + (2*offset.x), startPosition.y, 0.0f);
-        puzzleList[3].transform.position = new Vector3(startPosition.x + (3 * offset.x), startPosition.y, 0.0f);
-        //line 2
-        puzzleList[4].transform.position = new Vector3(startPosition.x, startPosition.y - offset.y, 0.0f);
-        puzzleList[5].transform.position = new Vector3(startPosition.x + offset.x, startPosition.y - offset.y, 0.0f);
-        puzzleList[6].transform.position = new Vector3(startPosition.x + (2 * offset.x), startPosition.y - offset.y, 0.0f);
-        puzzleList[7].transform.position = new Vector3(startPosition.x + (3 * offset.x), startPosition.y - offset.y, 0.0f);
-        //line 3
-        puzzleList[8].transform.position = new Vector3(startPosition.x, startPosition.y - (2*offset.y), 0.0f);
-        puzzleList[9].transform.position = new Vector3(startPosition.x + offset.x, startPosition.y - (2 * offset.y), 0.0f);
-        puzzleList[10].transform.position = new Vector3(startPosition.x + (2 * offset.x), startPosition.y - (2 * offset.y), 0.0f);
-        puzzleList[11].transform.position = new Vector3(startPosition.x + (3 * offset.x), startPosition.y - (2 * offset.y), 0.0f);
-        //line 4
-        puzzleList[12].transform.position = new Vector3(startPosition.x, startPosition.y - (3 * offset.y), 0.0f);
-        puzzleList[13].transform.position = new Vector3(startPosition.x + offset.x, startPosition.y - (3 * offset.y), 0.0f);
-        puzzleList[14].transform.position = new Vector3(startPosition.x + (2 * offset.x), startPosition.y - (3 * offset.y), 0.0f);
-        puzzleList[15].transform.position = new Vector3(startPosition.x + (3 * offset.x), startPosition.y - (3 * offset.y), 0.0f);
+        //make sure that it is equal to the current object
+        else if (instance != this)
+        {
+            instance.hudManager = FindObjectOfType<HudManager>();
+            //destroy the current game object - we only need 1 and we already have it
+            Destroy(gameObject);
+        }
+        //dont destroy this object when changing scenes!
+        DontDestroyOnLoad(gameObject);
 
+        //find an object of type HudManager
+        hudManager = FindObjectOfType<HudManager>();
+    }
+
+    //increase the player score
+    public void IncreaseScore(int amount)
+    {
+        score += amount;
+        //update the HUD
+        if (hudManager != null)
+        {
+            hudManager.ResetHud();
+        }
+
+        //show the new score
+        print("new score:" + score);
+        if (score > Highscore)
+        {
+            //save the new Highscore
+            Highscore = score;
+
+            print("New record!" + Highscore);
+        }
+
+    }
+    public void ResetGame()
+    {
+        //reset our score
+        score = 0;
+        //set the current level to 1
+        currentLevel = 1;
+        //load the level 1
+        SceneManager.LoadScene("Level1");
+
+    }
+    //send the player to the next level
+    public void IncreaseLevel()
+    {
+        //check if there are more levels
+        if (currentLevel < highestLevel)
+        {
+            //increase currentLevel by 1
+            currentLevel++;
+        }
+        else
+        {
+            //we are gonna go back to level 1
+            currentLevel = 1;
+        }
+        SceneManager.LoadScene("Level" + currentLevel);
+    }
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
+   
