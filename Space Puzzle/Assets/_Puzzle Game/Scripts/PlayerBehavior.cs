@@ -36,11 +36,12 @@ public class PlayerBehavior : MonoBehaviour
         {
             Debug.Log("Found Enemy");
             //Game Over!
-            //GameManager.instance.GameOver();
+            GameManager.instance.GameOver();
         }
         else if (other.CompareTag("Spikes"))
         {
             Debug.Log("Found Spikes");
+            GameManager.instance.GameOver();
         }
         /*else if (other.CompareTag("Goal"))
         {

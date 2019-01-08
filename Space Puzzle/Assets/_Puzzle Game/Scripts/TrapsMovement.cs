@@ -4,36 +4,46 @@ using UnityEngine;
 
 public class TrapsMovement : MonoBehaviour
 {
-    public GameObject Spikes;
-    public GameObject Wall;
-    public float RespawnTime = 2;
+    //speed of the enemy
+    public float speed = 3;
 
-    private void Update()
+    public float rangeY = 2;
+    //initial position
+    Vector3 initialPos;
+
+    //range of movement y
+
+    int direction = 1;
+    // Use this for initialization
+    void Start()
     {
-        StartCoroutine(ActivationRoutine());
+        initialPos = transform.position;
     }
 
-    private IEnumerator ActivationRoutine()
+    // Update is called once per frame
+    void Update()
     {
 
-        while (Spikes == true && Wall == true)
+        float factor = 1;
+
+        if (direction == -1)
         {
-            //Wait for seconds to Activate
-            yield return new WaitForSeconds(RespawnTime);
-
-            //Turn My game object that is set to false(off) to True(on).
-            Spikes.SetActive(true);
-            Wall.SetActive(true);
-
-            //Turn the Game Oject back off after 1 sec.
-            yield return new WaitForSeconds(RespawnTime);
-
-            //Game object will turn off
-            Spikes.SetActive(false);
-            Wall.SetActive(false);
+            factor = 2f;
         }
-        
-        
+        //how much are we moving
+        float movementY = factor * speed * Time.deltaTime * direction;
+
+        //new position y
+        float newY = transform.position.y + movementY;
+        //checking whether we've left our range
+        if (Mathf.Abs(newY - initialPos.y) > rangeY)
+        {
+            direction *= -1;
+        }
+        else
+        {
+            transform.position += new Vector3(0, movementY, 0);
+        }
     }
 
 }

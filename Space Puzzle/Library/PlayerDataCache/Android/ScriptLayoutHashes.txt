@@ -2,7 +2,10 @@ Android
 PlayerPath?
 C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/spacepuzzle.apk
 SceneListBegin?
+Assets/_Puzzle Game/Scenes/MenuRestart.unity
 Assets/_Puzzle Game/Scenes/Level1.unity
+Assets/_Puzzle Game/Scenes/Level2.unity
+Assets/_Puzzle Game/Scenes/Level3.unity
 SceneListEnd?
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.TacticsCamera
