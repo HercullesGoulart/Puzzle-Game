@@ -75,6 +75,7 @@
     <Compile Include="Assets\_Puzzle Game\Scripts\Tile.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\TrapsMovement.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\TurnManager.cs" />
+    <Compile Include="Assets\_Puzzle Game\Scripts\WallScript.cs" />
     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonBeamScript.cs" />
     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonButtonScript.cs" />
     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonFireProjectile.cs" />
