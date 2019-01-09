@@ -64,6 +64,7 @@
     <Compile Include="Assets\_Puzzle Game\Scripts\CoinController.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\Enemy.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\GameManager.cs" />
+    <Compile Include="Assets\_Puzzle Game\Scripts\HomeUIManager.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\HudManager.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\MenuScript.cs" />
     <Compile Include="Assets\_Puzzle Game\Scripts\NPCMove.cs" />

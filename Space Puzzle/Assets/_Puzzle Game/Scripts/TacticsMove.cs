@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TacticsMove : MonoBehaviour 
 {
+    
+
     public bool turn = false;
 
     List<Tile> selectableTiles = new List<Tile>();

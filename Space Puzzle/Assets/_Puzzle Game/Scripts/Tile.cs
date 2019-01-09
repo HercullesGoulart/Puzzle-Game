@@ -11,6 +11,7 @@ public class Tile : MonoBehaviour
 
     public List<Tile> adjacencyList = new List<Tile>();
 
+
     //Needed BFS (breadth first search)
     public bool visited = false;
     public Tile parent = null;
@@ -25,7 +26,7 @@ public class Tile : MonoBehaviour
 	void Start () 
 	{
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -36,15 +37,15 @@ public class Tile : MonoBehaviour
         }
         else if (target)
         {
-            GetComponent<Renderer>().material.color = Color.green;
+            GetComponent<Renderer>().material.color = Color.red;
         }
         else if (selectable)
         {
-            GetComponent<Renderer>().material.color = Color.red;
+            GetComponent<Renderer>().material.color = Color.green;
         }
         else
         {
-            GetComponent<Renderer>().material.color = Color.white;
+            GetComponent<Renderer>().material.color = Color.grey;
         }
 	}
 

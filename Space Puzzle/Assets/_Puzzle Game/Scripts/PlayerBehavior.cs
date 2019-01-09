@@ -5,49 +5,52 @@ using UnityEngine.UI;
 
 public class PlayerBehavior : MonoBehaviour
 {
-
-    //coin playing sound
-    //public AudioSource coinSound;
-
-    // Use this for initialization
+    public float cameraDistZ = 4;
     void Start()
     {
-
+        CameraFollowPlayer();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-
+        CameraFollowPlayer();
     }
-   
+
     void OnTriggerEnter(Collider other)
     {
+        if (GameObject.FindWithTag("Coin") == null)
+        {
+            Debug.Log("Passou de nivel");
+            //level complete
+            GameManager.instance.IncreaseLevel();
+        }
         if (other.CompareTag("Coin"))
         {
             GameManager.instance.IncreaseScore(1);
-            //Play sound
-            //coinSound.Play();
-            Debug.Log("Coin");
             //Destroy coin
             Destroy(other.gameObject);
         }
         else if (other.CompareTag("Enemy"))
         {
             Debug.Log("Found Enemy");
-            //Game Over!
-            GameManager.instance.GameOver();
         }
         else if (other.CompareTag("Spikes"))
         {
             Debug.Log("Found Spikes");
+            //Game over ou perder vida
             GameManager.instance.GameOver();
         }
-        /*else if (other.CompareTag("Goal"))
-        {
-            //send the player to the next level
-            GameManager.instance.IncreaseLevel();
-        }
-        */
+        
+
+    }
+    public void CameraFollowPlayer()
+    {
+        //grab the camera position
+        Vector3 cameraPos = Camera.main.transform.position;
+
+        //modify it's position according to cameraDistZ
+        cameraPos.z = transform.position.z - cameraDistZ;
+
+        //set the camera position
+        Camera.main.transform.position = cameraPos;
     }
 }

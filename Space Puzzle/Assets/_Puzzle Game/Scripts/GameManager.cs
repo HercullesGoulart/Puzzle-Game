@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
-    
+
     // score of the player
     public int score = 0;
     //high score of the game
@@ -18,13 +17,11 @@ public class GameManager : MonoBehaviour
     //HUD manager
     HudManager hudManager;
 
-
-
+    //static instance of the GM can be acessed from anywhere
+    public static GameManager instance;
 
     void Awake()
     {
-        // instance = this;
-
         //check that it exists
         if (instance == null)
         {
@@ -39,13 +36,11 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         //dont destroy this object when changing scenes!
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         //find an object of type HudManager
         hudManager = FindObjectOfType<HudManager>();
     }
-
-
 
     //increase the player score
     public void IncreaseScore(int amount)
@@ -76,24 +71,25 @@ public class GameManager : MonoBehaviour
         currentLevel = 1;
         //load the level 1
         SceneManager.LoadScene("Level1");
-
     }
     //send the player to the next level
     public void IncreaseLevel()
     {
+
         //check if there are more levels
-        if (score == 4)
+        if (currentLevel < highestLevel)
         {
             //increase currentLevel by 1
             currentLevel++;
+            
         }
         else
         {
             //we are gonna go back to level 1
             currentLevel = 1;
         }
-        SceneManager.LoadScene("Level1" + currentLevel);
-        score = 0;
+        SceneManager.LoadScene("Level" + currentLevel);
+        //trying to activate player turn
     }
     public void GameOver()
     {

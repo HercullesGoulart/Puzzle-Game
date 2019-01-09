@@ -6,7 +6,7 @@ public class WallScript : MonoBehaviour
 {
 
     public GameObject Wall;
-    public float RespawnTime = 2;
+    public float RespawnTime = 3;
 
     void Update()
     {
