@@ -223,9 +223,9 @@ RectTransform:
   m_Father: {fileID: 1772532672}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 3.100006, y: 6}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 3.100006, y: -131}
   m_SizeDelta: {x: 252.41, y: 94.02002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &20625444
@@ -486,7 +486,6 @@ GameObject:
   m_Component:
   - component: {fileID: 149219240}
   - component: {fileID: 149219239}
-  - component: {fileID: 149219241}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -522,19 +521,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &149219241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 149219238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c1960637382f5c4bacc348519ee09ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Wall: {fileID: 2020715498}
-  RespawnTime: 2
 --- !u!1 &175718166
 GameObject:
   m_ObjectHideFlags: 0
@@ -1899,7 +1885,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1631162010519366, guid: 9e157ee71c4bd694d8bec299f4df1e87, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114747490781674470, guid: 9e157ee71c4bd694d8bec299f4df1e87,
         type: 2}
@@ -1932,6 +1918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965473684}
+  - component: {fileID: 965473685}
   m_Layer: 0
   m_Name: Envroinment
   m_TagString: Untagged
@@ -1958,6 +1945,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &965473685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965473683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c1960637382f5c4bacc348519ee09ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Wall: {fileID: 2020715498}
+  RespawnTime: 3
 --- !u!1 &984532242
 GameObject:
   m_ObjectHideFlags: 0

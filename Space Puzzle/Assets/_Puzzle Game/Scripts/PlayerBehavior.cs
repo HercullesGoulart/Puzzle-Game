@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerBehavior : MonoBehaviour
 {
     public float cameraDistZ = 4;
+    public float cameraDistX = 0;
     void Start()
     {
         CameraFollowPlayer();
@@ -56,6 +57,7 @@ public class PlayerBehavior : MonoBehaviour
 
         //modify it's position according to cameraDistZ
         cameraPos.z = transform.position.z - cameraDistZ;
+        cameraPos.x = transform.position.x - cameraDistX;
 
         //set the camera position
         Camera.main.transform.position = cameraPos;
