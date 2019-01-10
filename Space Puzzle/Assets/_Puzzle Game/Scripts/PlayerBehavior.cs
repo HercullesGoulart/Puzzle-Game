@@ -44,7 +44,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             Debug.Log("Found Spikes");
             //Game over ou perder vida
-            GameManager.instance.GameOver();
+            GameManager.instance.ResetGame();
         }
 
 
