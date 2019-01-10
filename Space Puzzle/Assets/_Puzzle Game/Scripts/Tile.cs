@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : MonoBehaviour 
+public class Tile : MonoBehaviour
 {
+    public Color randomColor;
+
     public bool walkable = true;
     public bool current = false;
     public bool target = false;
@@ -22,15 +24,15 @@ public class Tile : MonoBehaviour
     public float g = 0;
     public float h = 0;
 
-	// Use this for initialization
-	void Start () 
-	{
-
+    // Use this for initialization
+    void Start()
+    {
+        GenerateRandomColor();
     }
-	
-	// Update is called once per frame
-	void Update () 
-	{
+
+    // Update is called once per frame
+    void Update()
+    {
         if (current)
         {
             GetComponent<Renderer>().material.color = Color.magenta;
@@ -45,9 +47,14 @@ public class Tile : MonoBehaviour
         }
         else
         {
-            GetComponent<Renderer>().material.color = Color.grey;
+            GetComponent<Renderer>().material.color = randomColor;
         }
-	}
+    }
+    private Color GenerateRandomColor()
+    {
+        return randomColor = new Vector4(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f);
+
+    }
 
     public void Reset()
     {

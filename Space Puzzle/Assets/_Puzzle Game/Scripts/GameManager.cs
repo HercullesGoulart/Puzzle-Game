@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         //dont destroy this object when changing scenes!
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         //find an object of type HudManager
         hudManager = FindObjectOfType<HudManager>();
@@ -72,12 +72,18 @@ public class GameManager : MonoBehaviour
         //load the level 1
         SceneManager.LoadScene("Level1");
     }
+    public void TryAgain()
+    {
+        score = 0;
+        SceneManager.LoadScene(currentLevel);
+    }
     //send the player to the next level
     public void IncreaseLevel()
     {
 
+        currentLevel++;
         //check if there are more levels
-        if (currentLevel < highestLevel)
+        /*if (currentLevel < highestLevel)
         {
             //increase currentLevel by 1
             currentLevel++;
@@ -87,7 +93,7 @@ public class GameManager : MonoBehaviour
         {
             //we are gonna go back to level 1
             currentLevel = 1;
-        }
+        }*/
         SceneManager.LoadScene("Level" + currentLevel);
         //trying to activate player turn
     }

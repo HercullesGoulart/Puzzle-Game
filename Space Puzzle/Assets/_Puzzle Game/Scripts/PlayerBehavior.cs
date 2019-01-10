@@ -13,21 +13,28 @@ public class PlayerBehavior : MonoBehaviour
     private void FixedUpdate()
     {
         CameraFollowPlayer();
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
         if (GameObject.FindWithTag("Coin") == null)
         {
             Debug.Log("Passou de nivel");
             //level complete
             GameManager.instance.IncreaseLevel();
         }
+        else
+        {
+            return;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+       
         if (other.CompareTag("Coin"))
         {
             GameManager.instance.IncreaseScore(1);
             //Destroy coin
             Destroy(other.gameObject);
+
+
         }
         else if (other.CompareTag("Enemy"))
         {
@@ -39,7 +46,7 @@ public class PlayerBehavior : MonoBehaviour
             //Game over ou perder vida
             GameManager.instance.GameOver();
         }
-        
+
 
     }
     public void CameraFollowPlayer()

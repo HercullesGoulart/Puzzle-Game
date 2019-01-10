@@ -17,11 +17,24 @@ public class TurnManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-        if (turnTeam.Count == 0)
+        /*if (turnTeam.Count == 0)
         {
             InitTeamTurnQueue();
+        }*/
+        InitTeamTurnQueue();
+        
+        //codigo para mudança e ativar o npc
+        /*if (turnTeam.Count > 0)
+        {
+            StartTurn();
         }
-	}
+        else
+        {
+            string team = turnKey.Dequeue();
+            turnKey.Enqueue(team);
+            InitTeamTurnQueue();
+        }*/
+    }
 
     static void InitTeamTurnQueue()
     {
