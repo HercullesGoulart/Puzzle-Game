@@ -61,23 +61,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Puzzle Game\Scripts\CameraMovement.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\CoinController.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\Enemy.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\GameManager.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\HomeUIManager.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\HudManager.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\MenuScript.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\NPCMove.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\Player.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\PlayerBehavior.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\PlayerMove.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\TacticsCamera.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\TacticsMove.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\Tile.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\TrapsMovement.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\TurnManager.cs" />
-    <Compile Include="Assets\_Puzzle Game\Scripts\WallScript.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\CameraMovement.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\CoinController.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\Enemy.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\GameManager.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\HomeUIManager.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\HudManager.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\LevelData.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\MenuScript.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\NPCMove.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\Player.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\PlayerBehavior.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\TacticsCamera.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\TacticsMove.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\Tile.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\TrapsMovement.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\TurnManager.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\WallScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
