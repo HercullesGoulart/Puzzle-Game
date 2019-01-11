@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -711,7 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -1201,7 +1201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -1451,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -1827,7 +1827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -1941,7 +1941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2050,7 +2050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2346,7 +2346,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2455,7 +2455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2569,7 +2569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2711,7 +2711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2820,7 +2820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -3038,7 +3038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -3224,7 +3224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -3333,7 +3333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -3442,7 +3442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -3551,7 +3551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -4126,7 +4126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -4490,7 +4490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -4697,7 +4697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0927957e78098429584e03220c6bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TileColor: {r: 1, g: 0, b: 0, a: 0}
+  TileColor: {r: 0.23201919, g: 1, b: 0, a: 0}
   walkable: 1
   current: 0
   target: 0
