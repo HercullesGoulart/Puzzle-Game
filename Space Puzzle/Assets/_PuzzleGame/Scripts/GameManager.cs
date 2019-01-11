@@ -61,7 +61,8 @@ public class GameManager : MonoBehaviour
             //save the new Highscore
             Highscore = score;
 
-            print("New record!" + Highscore);
+            //se for ativar highscore
+            //print("New record!" + Highscore);
         }
 
     }
