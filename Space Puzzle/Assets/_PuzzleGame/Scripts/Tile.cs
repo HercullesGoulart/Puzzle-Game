@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
 
-    public Color randomColor;
+    public Color TileColor;
 
     public bool walkable = true;
     public bool current = false;
@@ -28,7 +28,7 @@ public class Tile : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        GenerateRandomColor();
+ 
     }
 
     // Update is called once per frame
@@ -36,7 +36,7 @@ public class Tile : MonoBehaviour
     {
         if (current)
         {
-            GetComponent<Renderer>().material.color = Color.magenta;
+            GetComponent<Renderer>().material.color = Color.green;
         }
         else if (target)
         {
@@ -48,13 +48,8 @@ public class Tile : MonoBehaviour
         }
         else
         {
-            GetComponent<Renderer>().material.color = Color.cyan;
+            GetComponent<Renderer>().material.color = TileColor;
         }
-    }
-    private Color GenerateRandomColor()
-    {
-        return randomColor = new Vector4(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f), 1f);
-
     }
 
     public void Reset()

@@ -76,7 +76,6 @@ public class GameManager : MonoBehaviour
     }
     public void TryAgain()
     {
-        score = 0;
         SceneManager.LoadScene(currentLevel);
     }
     //send the player to the next level
@@ -84,18 +83,6 @@ public class GameManager : MonoBehaviour
     {
 
         currentLevel++;
-        //check if there are more levels
-        /*if (currentLevel < highestLevel)
-        {
-            //increase currentLevel by 1
-            currentLevel++;
-            
-        }
-        else
-        {
-            //we are gonna go back to level 1
-            currentLevel = 1;
-        }*/
         SceneManager.LoadScene("Level" + currentLevel);
         //trying to activate player turn
     }
