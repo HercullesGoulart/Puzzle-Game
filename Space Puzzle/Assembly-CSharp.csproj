@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_PuzzleGame\Scripts\AnimationLevel.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\CoinController.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Enemy.cs" />
@@ -77,9 +78,7 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsCamera.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Tile.cs" />
-    <Compile Include="Assets\_PuzzleGame\Scripts\TrapsMovement.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TurnManager.cs" />
-    <Compile Include="Assets\_PuzzleGame\Scripts\WallScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

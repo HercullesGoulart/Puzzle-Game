@@ -6,26 +6,37 @@ using UnityEngine.UI;
 public class PlayerBehavior : MonoBehaviour
 {
 
+    public Animator transitionAnim;
+    public ParticleSystem particleAnim;
+    public AudioSource groundSound;
+
     public float cameraDistZ = 4;
     //public float cameraDistX = 0;
     void Start()
     {
         CameraFollowPlayer();
     }
-    private void FixedUpdate()
+    void Update()
     {
+
         CameraFollowPlayer();
         if (GameObject.FindWithTag("Coin") == null)
         {
             Debug.Log("Passou de nivel");
             //level complete
-            GameManager.instance.IncreaseLevel();
+            EndScene();
+            ChangeLevel();
         }
+
         else
         {
             return;
         }
+
+      
+
     }
+    
 
     void OnTriggerEnter(Collider other)
     {
@@ -38,15 +49,22 @@ public class PlayerBehavior : MonoBehaviour
 
 
         }
-        else if (other.CompareTag("Enemy"))
+        if (other.CompareTag("Tile"))
+        {
+            particleAnim.Play();
+            groundSound.Play();
+
+        }
+        else if (other.CompareTag("NPC"))
         {
             Debug.Log("Found Enemy");
+            GameManager.instance.TryAgain();
         }
         else if (other.CompareTag("Spikes"))
         {
             Debug.Log("Found Spikes");
             //Game over ou perder vida
-            GameManager.instance.ResetGame();
+            GameManager.instance.TryAgain();
         }
 
 
@@ -62,5 +80,15 @@ public class PlayerBehavior : MonoBehaviour
 
         //set the camera position
         Camera.main.transform.position = cameraPos;
+    }
+    IEnumerator EndScene()
+    {
+        transitionAnim.SetTrigger("end");
+        yield return new WaitForSeconds(2f);
+        
+    }
+    void ChangeLevel()
+    {
+        GameManager.instance.IncreaseLevel();
     }
 }

@@ -77,7 +77,8 @@ public class GameManager : MonoBehaviour
     }
     public void TryAgain()
     {
-        SceneManager.LoadScene(currentLevel);
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
     //send the player to the next level
     public void IncreaseLevel()
