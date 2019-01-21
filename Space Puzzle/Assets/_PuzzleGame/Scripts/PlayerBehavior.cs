@@ -10,6 +10,7 @@ public class PlayerBehavior : MonoBehaviour
     public ParticleSystem particleAnim;
     public AudioSource groundSound;
 
+
     public float cameraDistZ = 4;
     //public float cameraDistX = 0;
     void Start()
