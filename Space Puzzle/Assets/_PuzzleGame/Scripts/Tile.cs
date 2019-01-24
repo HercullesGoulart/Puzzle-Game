@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
 
-    public Color TileColor;
+    //public Color TileColor;
 
     public bool walkable = true;
     public bool current = false;
@@ -51,7 +51,7 @@ public class Tile : MonoBehaviour
         //{
         //    GetComponent<Renderer>().material.color = TileColor;
         //}
-        GetComponent<Renderer>().material.color = TileColor;
+        //GetComponent<Renderer>().material.color = TileColor;
 
     }
 

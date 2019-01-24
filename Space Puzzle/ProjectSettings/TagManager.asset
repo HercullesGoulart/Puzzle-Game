@@ -9,6 +9,7 @@ TagManager:
   - Spikes
   - Tile
   - NPC
+  - FinalCoin
   layers:
   - Default
   - TransparentFX

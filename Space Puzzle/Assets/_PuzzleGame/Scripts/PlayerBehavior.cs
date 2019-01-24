@@ -9,6 +9,11 @@ public class PlayerBehavior : MonoBehaviour
     public Animator transitionAnim;
     public ParticleSystem particleAnim;
     public AudioSource groundSound;
+    public AudioSource coinSound;
+    public GameObject finalCoin;
+    public int progress;
+
+    public ProgressBar Pb;
 
 
     public float cameraDistZ = 4;
@@ -16,6 +21,17 @@ public class PlayerBehavior : MonoBehaviour
     void Start()
     {
         CameraFollowPlayer();
+
+        Pb.BarValue = 0;
+
+        GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
+        int numberOfCoins = coins.Length;
+
+
+        int totalCoins = numberOfCoins + 1;
+
+        progress = 100 / totalCoins;
+
     }
     void Update()
     {
@@ -23,10 +39,8 @@ public class PlayerBehavior : MonoBehaviour
         CameraFollowPlayer();
         if (GameObject.FindWithTag("Coin") == null)
         {
-            Debug.Log("Passou de nivel");
-            //level complete
-            EndScene();
-            ChangeLevel();
+            finalCoin.SetActive(true);
+            
         }
 
         else
@@ -41,12 +55,33 @@ public class PlayerBehavior : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-       
+
+        if (other.CompareTag("FinalCoin"))
+        {
+            GameManager.instance.IncreaseScore(1);
+
+
+            //Destroy coin
+            coinSound.Play();
+            Destroy(other.gameObject);
+            Debug.Log("Passou de nivel");
+            //level complete
+            EndScene();
+            ChangeLevel();
+
+
+
+        }
         if (other.CompareTag("Coin"))
         {
             GameManager.instance.IncreaseScore(1);
+
+
             //Destroy coin
+            coinSound.Play();
             Destroy(other.gameObject);
+            Pb.BarValue = Pb.BarValue + progress;
+            
 
 
         }
