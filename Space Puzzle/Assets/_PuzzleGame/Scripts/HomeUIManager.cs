@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class HomeUIManager : MonoBehaviour {
 
+    public HudManager instance;
 	// Start Level 1
 	public void StartGame () {
-
+        
         SceneManager.LoadScene("Level1");
 	}
+
 }

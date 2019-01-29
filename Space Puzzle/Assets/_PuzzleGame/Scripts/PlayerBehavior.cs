@@ -6,17 +6,20 @@ using UnityEngine.UI;
 public class PlayerBehavior : MonoBehaviour
 {
 
+    public GameObject congratulations;
     public Animator transitionAnim;
     public ParticleSystem particleAnim;
-    public AudioSource groundSound;
     public AudioSource coinSound;
     public GameObject finalCoin;
+
+
     public int progress;
 
     public ProgressBar Pb;
 
 
-    public float cameraDistZ = 4;
+
+    //float cameraDistY = 7;
     //public float cameraDistX = 0;
     void Start()
     {
@@ -40,7 +43,7 @@ public class PlayerBehavior : MonoBehaviour
         if (GameObject.FindWithTag("Coin") == null)
         {
             finalCoin.SetActive(true);
-            
+
         }
 
         else
@@ -48,10 +51,10 @@ public class PlayerBehavior : MonoBehaviour
             return;
         }
 
-      
+
 
     }
-    
+
 
     void OnTriggerEnter(Collider other)
     {
@@ -66,11 +69,10 @@ public class PlayerBehavior : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("Passou de nivel");
             //level complete
-            EndScene();
-            ChangeLevel();
-
-
-
+            congratulations.SetActive(true);
+            StartCoroutine(EndAnimation());
+            StartCoroutine(EndScene());
+            
         }
         if (other.CompareTag("Coin"))
         {
@@ -81,14 +83,13 @@ public class PlayerBehavior : MonoBehaviour
             coinSound.Play();
             Destroy(other.gameObject);
             Pb.BarValue = Pb.BarValue + progress;
-            
+
 
 
         }
         if (other.CompareTag("Tile"))
         {
             particleAnim.Play();
-            groundSound.Play();
 
         }
         else if (other.CompareTag("NPC"))
@@ -105,23 +106,36 @@ public class PlayerBehavior : MonoBehaviour
 
 
     }
+
     public void CameraFollowPlayer()
     {
         //grab the camera position
         Vector3 cameraPos = Camera.main.transform.position;
 
         //modify it's position according to cameraDistZ
-        cameraPos.z = transform.position.z - cameraDistZ;
+        //cameraPos.y = transform.position.y - cameraDistY;
         //cameraPos.x = transform.position.x - cameraDistX;
 
         //set the camera position
-        Camera.main.transform.position = cameraPos;
+        //Camera.main.transform.position = cameraPos;
     }
     IEnumerator EndScene()
     {
-        transitionAnim.SetTrigger("end");
+
         yield return new WaitForSeconds(2f);
-        
+
+        Debug.Log("chamou o EndScene");
+        ChangeLevel();
+
+    }
+    IEnumerator EndAnimation()
+    {
+
+        yield return new WaitForSeconds(1f);
+
+        transitionAnim.SetTrigger("end");
+
+
     }
     void ChangeLevel()
     {

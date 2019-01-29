@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     //HUD manager
     HudManager hudManager;
 
+    Pause pause;
+
     //static instance of the GM can be acessed from anywhere
     public static GameManager instance;
 

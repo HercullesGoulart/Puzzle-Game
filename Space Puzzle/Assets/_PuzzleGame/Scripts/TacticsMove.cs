@@ -14,7 +14,7 @@ public class TacticsMove : MonoBehaviour
     Stack<Tile> path = new Stack<Tile>();
     Tile currentTile;
 
-    public bool moving = false;
+    public bool moving = true;
     public int move = 5;
     public float jumpHeight = 2;
     public float moveSpeed = 2;

@@ -2,18 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : TacticsMove 
+public class PlayerMove : TacticsMove
 {
+    //int speed = 3;
+    public Tile tile;
 
-	// Use this for initialization
-	void Start () 
-	{
+    // Use this for initialization
+    void Start()
+    {
         Init();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         Debug.DrawRay(transform.position, transform.forward);
 
         if (!turn)
@@ -30,7 +32,7 @@ public class PlayerMove : TacticsMove
         {
             Move();
         }
-	}
+    }
 
     void CheckMouse()
     {
