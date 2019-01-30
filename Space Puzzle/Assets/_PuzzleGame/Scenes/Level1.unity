@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 36887948}
   - component: {fileID: 36887947}
   - component: {fileID: 36887950}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 214770172}
   - component: {fileID: 214770171}
   - component: {fileID: 214770174}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (2)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -628,7 +628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 335621032}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Row1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,8 +704,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: set_text
-        m_Mode: 5
+        m_MethodName: MoveDown
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -713,7 +713,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Down
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: Lean.Touch.LeanFingerSwipe+FingerEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   OnSwipeDelta:
@@ -733,7 +733,7 @@ GameObject:
   - component: {fileID: 383599990}
   - component: {fileID: 383599989}
   - component: {fileID: 383599992}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 420960485}
   - component: {fileID: 420960484}
   - component: {fileID: 420960487}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (2)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -1117,52 +1117,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4007203363892820, guid: 578686d31f4456f4094506cc2090cf02,
     type: 2}
   m_PrefabInternal: {fileID: 858910656}
---- !u!1001 &562785355
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 1.4737308
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.51199996
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.43343043
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1919667951200860, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-      propertyPath: m_Name
-      value: LeanTouch (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &609115667
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,7 +1129,7 @@ GameObject:
   - component: {fileID: 609115670}
   - component: {fileID: 609115669}
   - component: {fileID: 609115672}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (3)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -1316,7 +1270,7 @@ GameObject:
   - component: {fileID: 646634931}
   - component: {fileID: 646634930}
   - component: {fileID: 646634933}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (3)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -1420,7 +1374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 679682862}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: TILES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,7 +1448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 867086983}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Row2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1607,7 +1561,7 @@ GameObject:
   - component: {fileID: 984532245}
   - component: {fileID: 984532244}
   - component: {fileID: 984532247}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -1840,7 +1794,7 @@ GameObject:
   - component: {fileID: 1066960773}
   - component: {fileID: 1066960772}
   - component: {fileID: 1066960775}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (1)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -2103,6 +2057,11 @@ Prefab:
       propertyPath: moving
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114308320655564068, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 2}
+      propertyPath: tile
+      value: 
+      objectReference: {fileID: 1587994874}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46a64bc75a2f57d40b6379f306423ee2, type: 2}
   m_IsPrefabAsset: 0
@@ -2118,7 +2077,7 @@ GameObject:
   - component: {fileID: 1114196802}
   - component: {fileID: 1114196801}
   - component: {fileID: 1114196804}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -2231,7 +2190,7 @@ GameObject:
   - component: {fileID: 1160646560}
   - component: {fileID: 1160646559}
   - component: {fileID: 1160646562}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (1)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -2426,8 +2385,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 5
+        m_MethodName: MoveUp
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2455,7 +2414,7 @@ GameObject:
   - component: {fileID: 1246187406}
   - component: {fileID: 1246187405}
   - component: {fileID: 1246187408}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (3)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -2559,7 +2518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253697707}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Row3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2933,7 +2892,7 @@ GameObject:
   - component: {fileID: 1509759502}
   - component: {fileID: 1509759501}
   - component: {fileID: 1509759504}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (3)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -3041,7 +3000,7 @@ GameObject:
   - component: {fileID: 1519643170}
   - component: {fileID: 1519643169}
   - component: {fileID: 1519643172}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (2)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -3311,7 +3270,7 @@ GameObject:
   - component: {fileID: 1587994872}
   - component: {fileID: 1587994871}
   - component: {fileID: 1587994874}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (2)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -3471,6 +3430,117 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1702794802
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.4737308
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.51199996
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.43343043
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091969600590308, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919667951200860, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+      propertyPath: m_Name
+      value: LeanTouch (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114903568753596934, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1936404511}
+    - target: {fileID: 114260285442700868, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1936404511}
+    - target: {fileID: 114456330216042416, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1936404511}
+    - target: {fileID: 114692748624152802, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1936404511}
+    - target: {fileID: 114260285442700868, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114260285442700868, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114692748624152802, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114692748624152802, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224508157888664774, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114903568753596934, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114903568753596934, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114456330216042416, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 114456330216042416, guid: a3be9ab507519de40a2d0e24f495f0c3,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3be9ab507519de40a2d0e24f495f0c3, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1712749364
 GameObject:
   m_ObjectHideFlags: 0
@@ -3479,7 +3549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712749365}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Row4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3600,7 +3670,7 @@ GameObject:
   - component: {fileID: 1797031386}
   - component: {fileID: 1797031385}
   - component: {fileID: 1797031388}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (1)
   m_TagString: Tile
   m_Icon: {fileID: 0}
@@ -3743,6 +3813,12 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1153740644070002, guid: 46a64bc75a2f57d40b6379f306423ee2,
     type: 2}
   m_PrefabInternal: {fileID: 1104833887}
+--- !u!114 &1936404511 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114308320655564068, guid: 46a64bc75a2f57d40b6379f306423ee2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1104833887}
+  m_Script: {fileID: 11500000, guid: 2aad065545539f1468f84cbd030120dc, type: 3}
 --- !u!114 &1946998476 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114574252695239818, guid: 99f4fc269c1896f43be968f0fdeef1f0,
@@ -3782,7 +3858,7 @@ GameObject:
   - component: {fileID: 2034682613}
   - component: {fileID: 2034682612}
   - component: {fileID: 2034682615}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Tile (1)
   m_TagString: Tile
   m_Icon: {fileID: 0}
