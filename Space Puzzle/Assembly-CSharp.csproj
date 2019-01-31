@@ -86,14 +86,6 @@
     <Compile Include="Assets\Dungeon Pack\Scripts\Rotator.cs" />
     <Compile Include="Assets\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
     <Compile Include="Assets\Dungeon Pack\Scripts\TrapDoorDemo.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
-    <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
-    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraMove.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraZoom.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCanvasArrow.cs" />
@@ -143,7 +135,6 @@
     <Compile Include="Assets\ProgressBar\Script\ProgressBar.cs" />
     <Compile Include="Assets\ProgressBar\Script\ProgressBarCircle.cs" />
     <None Include="Assets\Lean\Touch\Examples\Fonts\OFL.txt" />
-    <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Low Poly UI Kit - v.1.1c\UI Kit\AI Files\README.txt" />
     <None Include="Assets\Low Poly UI Kit - v.1.1c\UI Kit\Font\README.txt" />
     <None Include="Assets\Lean\Touch\Examples\Shaders\Skybox.shader" />

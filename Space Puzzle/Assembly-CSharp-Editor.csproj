@@ -61,9 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\Lean\Touch\Editor\LeanDocumentation.cs" />
-    <None Include="Assets\EffectExamples\Editor\PackageManagerAssembly\PackageImportList.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -327,9 +325,6 @@
     </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
-    </Reference>
-    <Reference Include="PackageManagerAssembly">
-      <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Assets/EffectExamples/Editor/PackageManagerAssembly/PackageManagerAssembly.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Herculles Goulart/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
