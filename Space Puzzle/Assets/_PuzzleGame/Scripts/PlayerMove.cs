@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerMove : TacticsMove
 {
-    TacticsMove tacticsmove;
-    Tile tile;
+    PositioningLeanTouch pos;
     // Use this for initialization
     void Start()
     {
@@ -28,12 +27,12 @@ public class PlayerMove : TacticsMove
         {
             FindSelectableTiles();
             CheckMouse();
+            pos.FindTile();
         }
         else
         {
             Move();
         }
-
     }
 
     void CheckMouse()
@@ -51,57 +50,14 @@ public class PlayerMove : TacticsMove
 
                     if (t.selectable)
                     {
-                        MoveToTile(tile);
-                        Debug.Log("predefinido");
+                        MoveToTile(t);
+
+
                     }
                 }
             }
         }
 
 
-    }
-    public void MoveUp()
-    {
-
-        
-        //Tile tile = 
-        //MoveToTile(tile);
-
-        
-        Debug.Log("teste up");
-    }
-    public void MoveDown()
-    {
-        //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
-        //Debug.Log("teste down");
-    }
-    public void MoveLeft()
-    {
-        //transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-        //Debug.Log("teste left");
-    }
-    public void MoveRight()
-    {
-        //transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
-        //Debug.Log("teste right");
-    }
-    public void CheckTile(Vector3 direction, float jumpHeight, Tile target)
-    {
-        Vector3 halfExtents = new Vector3(0.25f, (1 + jumpHeight) / 2.0f, 0.25f);
-        Collider[] colliders = Physics.OverlapBox(transform.position + direction, halfExtents);
-
-        foreach (Collider item in colliders)
-        {
-            Tile tile = item.GetComponent<Tile>();
-            if (tile != null && tile.walkable)
-            {
-                RaycastHit hit;
-
-                if (!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 1) || (tile == target))
-                {
-                    tile.adjacencyList.Add(tile);
-                }
-            }
-        }
     }
 }

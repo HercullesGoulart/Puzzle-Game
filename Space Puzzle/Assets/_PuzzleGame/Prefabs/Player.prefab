@@ -467,7 +467,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundSound: {fileID: 82127355978162216}
   waterSound: {fileID: 82480044532051316}
-  splash: {fileID: 1897775175603564}
 --- !u!114 &114308320655564068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,7 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turn: 1
-  moving: 0
+  moving: 1
   move: 1
   jumpHeight: 2
   moveSpeed: 3
@@ -4885,7 +4884,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c185392cb22aeb741a03d966a7012837, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

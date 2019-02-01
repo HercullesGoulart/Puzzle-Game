@@ -75,6 +75,7 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\Player.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PlayerMove.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\PositioningLeanTouch.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\RestartLevel.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsCamera.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsMove.cs" />

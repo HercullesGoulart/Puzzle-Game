@@ -6,8 +6,7 @@ public class PlayerAudio : MonoBehaviour {
 
     public AudioSource groundSound;
     public AudioSource waterSound;
-    public GameObject splash_prefab;
-    public GameObject player;
+
 
     // Use this for initialization
     void Start () {
@@ -21,7 +20,7 @@ public class PlayerAudio : MonoBehaviour {
     {
         groundSound.Play();
         waterSound.Play();
-        //Instantiate(splash_prefab, player.transform.position, player.transform.rotation);
-        
+
+
     }
 }

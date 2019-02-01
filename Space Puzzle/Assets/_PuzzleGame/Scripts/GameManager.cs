@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         }
 
         //show the new score
-        print("new score:" + score);
+        //print("new score:" + score);
         if (score > Highscore)
         {
             //save the new Highscore

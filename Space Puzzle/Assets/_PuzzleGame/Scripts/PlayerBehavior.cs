@@ -89,7 +89,7 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (other.CompareTag("Tile"))
         {
-            particleAnim.Play();
+            //particleAnim.Play();
 
         }
         else if (other.CompareTag("NPC"))

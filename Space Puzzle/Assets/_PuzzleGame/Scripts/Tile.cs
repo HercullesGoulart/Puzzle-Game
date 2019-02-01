@@ -52,7 +52,6 @@ public class Tile : MonoBehaviour
         //    GetComponent<Renderer>().material.color = TileColor;
         //}
         //GetComponent<Renderer>().material.color = TileColor;
-
     }
 
     public void Reset()

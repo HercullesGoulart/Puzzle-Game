@@ -342,6 +342,7 @@ public class TacticsMove : MonoBehaviour
         while (openList.Count > 0)
         {
             Tile t = FindLowestF(openList);
+            
 
             closedList.Add(t);
 
@@ -379,6 +380,7 @@ public class TacticsMove : MonoBehaviour
                     tile.f = tile.g + tile.h;
 
                     openList.Add(tile);
+                    
                 }
             }
         }
@@ -390,6 +392,7 @@ public class TacticsMove : MonoBehaviour
     public void BeginTurn()
     {
         turn = true;
+
     }
 
     public void EndTurn()
