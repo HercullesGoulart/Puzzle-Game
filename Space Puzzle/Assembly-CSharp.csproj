@@ -64,6 +64,7 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\CoinController.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Enemy.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\GameManager.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\HomeUIManager.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\HudManager.cs" />
@@ -71,12 +72,12 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\MenuScript.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\NPCMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Pause.cs" />
-    <Compile Include="Assets\_PuzzleGame\Scripts\PlaneColor.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Player.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PositioningLeanTouch.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\RestartLevel.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\Splash.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsCamera.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Tile.cs" />

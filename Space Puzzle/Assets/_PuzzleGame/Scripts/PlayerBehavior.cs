@@ -11,16 +11,15 @@ public class PlayerBehavior : MonoBehaviour
     public ParticleSystem particleAnim;
     public AudioSource coinSound;
     public GameObject finalCoin;
-
-
     public int progress;
 
     public ProgressBar Pb;
 
 
+    public AudioSource groundSound;
+    public AudioSource waterSound;
 
-    //float cameraDistY = 7;
-    //public float cameraDistX = 0;
+
     void Start()
     {
         CameraFollowPlayer();
@@ -83,15 +82,8 @@ public class PlayerBehavior : MonoBehaviour
             coinSound.Play();
             Destroy(other.gameObject);
             Pb.BarValue = Pb.BarValue + progress;
-
-
-
         }
-        if (other.CompareTag("Tile"))
-        {
-            //particleAnim.Play();
 
-        }
         else if (other.CompareTag("NPC"))
         {
             Debug.Log("Found Enemy");
@@ -103,6 +95,11 @@ public class PlayerBehavior : MonoBehaviour
             //Game over ou perder vida
             GameManager.instance.TryAgain();
         }
+        else if (other.CompareTag("Tile"))
+        {
+            groundSound.Play();
+            waterSound.Play();
+        }
 
 
     }
@@ -110,13 +107,13 @@ public class PlayerBehavior : MonoBehaviour
     public void CameraFollowPlayer()
     {
         //grab the camera position
-        Vector3 cameraPos = Camera.main.transform.position;
+        //Vector3 cameraPos = Camera.main.transform.position;
 
-        //modify it's position according to cameraDistZ
-        //cameraPos.y = transform.position.y - cameraDistY;
-        //cameraPos.x = transform.position.x - cameraDistX;
+        ////modify it's position according to cameraDistZ
+        //cameraPos.z = transform.position.z - cameraDistZ;
+        ////cameraPos.z = transform.position.y + cameraDistY;
 
-        //set the camera position
+        ////set the camera position
         //Camera.main.transform.position = cameraPos;
     }
     IEnumerator EndScene()

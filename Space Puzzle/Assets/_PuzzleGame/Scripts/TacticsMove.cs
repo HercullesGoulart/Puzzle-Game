@@ -159,7 +159,7 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
 
-            TurnManager.EndTurn();
+            //TurnManager.EndTurn();
         }
     }
 

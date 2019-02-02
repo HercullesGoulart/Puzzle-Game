@@ -8,19 +8,9 @@ public class PlayerAudio : MonoBehaviour {
     public AudioSource waterSound;
 
 
-    // Use this for initialization
-    void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
     public void Grounded()
     {
         groundSound.Play();
         waterSound.Play();
-
-
     }
 }

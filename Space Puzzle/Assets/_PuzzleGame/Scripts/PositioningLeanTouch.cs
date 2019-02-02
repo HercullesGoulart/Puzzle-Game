@@ -4,59 +4,56 @@ using UnityEngine;
 
 public class PositioningLeanTouch : MonoBehaviour
 {
-    Collider pos;
-    TacticsMove move;
-
+    public Collider pos;
+    public TacticsMove move;
+    public GameObject player;
     // Use this for initialization
     void Start()
     {
         pos = GetComponent<Collider>();
     }
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        FindTile();
+        transform.position = player.transform.position;
     }
-    public void FindTile()
+
+    public void GetTile()
     {
-        if (pos.tag == "Tile")
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -transform.up, out hit))
         {
-            Tile t = pos.GetComponent<Tile>();
+            Tile touch = hit.transform.GetComponent<Tile>();
 
-            if (t.selectable)
+            if (touch.selectable)
             {
-                move.MoveToTile(t);
-
+                move.MoveToTile(touch);
 
             }
+
         }
+
+
     }
+
     public void MoveUp()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
-        Debug.Log("teste up");
-        FindTile();
-        
-
+        GetTile();
     }
     public void MoveDown()
     {
 
         transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1);
-        Debug.Log("teste down");
-        FindTile();
+        GetTile();
     }
     public void MoveLeft()
     {
         transform.position = new Vector3(transform.position.x - 1, transform.position.y, transform.position.z);
-        Debug.Log("teste left");
-        FindTile();
+        GetTile();
     }
     public void MoveRight()
     {
         transform.position = new Vector3(transform.position.x + 1, transform.position.y, transform.position.z);
-        Debug.Log("teste right");
-        FindTile();
+        GetTile();
     }
 }

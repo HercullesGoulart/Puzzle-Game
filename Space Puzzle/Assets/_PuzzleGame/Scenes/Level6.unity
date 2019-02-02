@@ -2105,6 +2105,46 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 114451046822298036, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2093253082}
+    - target: {fileID: 114451046822298036, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688777537554484, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2093253082}
+    - target: {fileID: 114688777537554484, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884779659539252, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2093253082}
+    - target: {fileID: 114884779659539252, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114760421740362490, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2093253082}
+    - target: {fileID: 114760421740362490, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveDown
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 2}
   m_IsPrefabAsset: 0
@@ -2246,15 +2286,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.39
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3.9
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3498,7 +3538,7 @@ Prefab:
         type: 2}
       propertyPath: groundSound
       value: 
-      objectReference: {fileID: 2031930384}
+      objectReference: {fileID: 0}
     - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
         type: 2}
       propertyPath: coinSound
@@ -3522,11 +3562,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46a64bc75a2f57d40b6379f306423ee2, type: 2}
   m_IsPrefabAsset: 0
---- !u!82 &2031930384 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 82184831168846728, guid: 46a64bc75a2f57d40b6379f306423ee2,
-    type: 2}
-  m_PrefabInternal: {fileID: 2031930383}
 --- !u!1 &2034682610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3675,6 +3710,12 @@ Transform:
   m_Father: {fileID: 615342917}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093253082 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114413374263616084, guid: 46a64bc75a2f57d40b6379f306423ee2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2031930383}
+  m_Script: {fileID: 11500000, guid: 50d6da6f29c198740a2791deeb6a1c28, type: 3}
 --- !u!1 &2096231544
 GameObject:
   m_ObjectHideFlags: 0

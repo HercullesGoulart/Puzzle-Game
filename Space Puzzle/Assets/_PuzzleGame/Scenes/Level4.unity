@@ -1757,6 +1757,46 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 114688777537554484, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2031930385}
+    - target: {fileID: 114688777537554484, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 114760421740362490, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2031930385}
+    - target: {fileID: 114760421740362490, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 114884779659539252, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2031930385}
+    - target: {fileID: 114884779659539252, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 114451046822298036, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2031930385}
+    - target: {fileID: 114451046822298036, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 2}
+      propertyPath: OnSwipe.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveLeft
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 2}
   m_IsPrefabAsset: 0
@@ -2251,15 +2291,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.39
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -3.9
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3234,6 +3274,12 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2031930383}
   m_Script: {fileID: 11500000, guid: 920fb7ecc5920614dbf5124c7d229127, type: 3}
+--- !u!114 &2031930385 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114413374263616084, guid: 46a64bc75a2f57d40b6379f306423ee2,
+    type: 2}
+  m_PrefabInternal: {fileID: 2031930383}
+  m_Script: {fileID: 11500000, guid: 50d6da6f29c198740a2791deeb6a1c28, type: 3}
 --- !u!1 &2034682610
 GameObject:
   m_ObjectHideFlags: 0

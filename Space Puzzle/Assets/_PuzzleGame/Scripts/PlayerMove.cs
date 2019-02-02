@@ -20,14 +20,13 @@ public class PlayerMove : TacticsMove
         {
             //return;
             FindSelectableTiles();
-            CheckMouse();
+            //CheckMouse();
         }
 
         if (!moving)
         {
             FindSelectableTiles();
-            CheckMouse();
-            pos.FindTile();
+            //CheckMouse();
         }
         else
         {
@@ -37,6 +36,7 @@ public class PlayerMove : TacticsMove
 
     void CheckMouse()
     {
+        //if activate this function the click on tile will start to move the player
         if (Input.GetMouseButtonUp(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

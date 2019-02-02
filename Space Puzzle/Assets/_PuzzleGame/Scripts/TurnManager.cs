@@ -16,7 +16,8 @@ public class TurnManager : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-        InitTeamTurnQueue();
+        StartTurn();
+        //InitTeamTurnQueue();
         /*if (turnTeam.Count == 0)
         {
             InitTeamTurnQueue();
@@ -57,22 +58,22 @@ public class TurnManager : MonoBehaviour
         }
     }
 
-    public static void EndTurn()
-    {
-        TacticsMove unit = turnTeam.Dequeue();
-        unit.EndTurn();
+    //public static void EndTurn()
+    //{
+    //    TacticsMove unit = turnTeam.Dequeue();
+    //    unit.EndTurn();
 
-        if (turnTeam.Count > 0)
-        {
-            StartTurn();
-        }
-        else
-        {
-            string team = turnKey.Dequeue();
-            turnKey.Enqueue(team);
-            InitTeamTurnQueue();
-        }
-    }
+    //    if (turnTeam.Count > 0)
+    //    {
+    //        StartTurn();
+    //    }
+    //    else
+    //    {
+    //        string team = turnKey.Dequeue();
+    //        turnKey.Enqueue(team);
+    //        InitTeamTurnQueue();
+    //    }
+    //}
 
     public static void AddUnit(TacticsMove unit)
     {
