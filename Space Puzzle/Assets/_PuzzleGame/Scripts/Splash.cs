@@ -8,6 +8,7 @@ public class Splash : MonoBehaviour
     public GameObject player;
 
 
+    public int secSplash= 4;
     public int numeroSplash = 20;
     public GameObject splash_prefab;
     List<GameObject> SplashList;
@@ -27,8 +28,10 @@ public class Splash : MonoBehaviour
     }
     void Update()
     {
+        transform.rotation = player.transform.rotation;
+        int rotation = Random.Range(0, 5) * 90;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation, transform.eulerAngles.z); 
         transform.position = player.transform.position + new Vector3(0, -0.21f, 0);
-
     }
     void OnTriggerEnter(Collider other)
     {
@@ -54,7 +57,7 @@ public class Splash : MonoBehaviour
 
     IEnumerator waitSeconds(GameObject targetDisable)
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(secSplash);
         targetDisable.SetActive(false);
     }
 

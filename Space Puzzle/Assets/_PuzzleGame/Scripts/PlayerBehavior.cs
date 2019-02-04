@@ -16,19 +16,13 @@ public class PlayerBehavior : MonoBehaviour
     public ProgressBar Pb;
 
 
-    public AudioSource groundSound;
-    public AudioSource waterSound;
-
 
     void Start()
     {
-        CameraFollowPlayer();
-
         Pb.BarValue = 0;
 
         GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
         int numberOfCoins = coins.Length;
-
 
         int totalCoins = numberOfCoins + 1;
 
@@ -37,21 +31,10 @@ public class PlayerBehavior : MonoBehaviour
     }
     void Update()
     {
-
-        CameraFollowPlayer();
         if (GameObject.FindWithTag("Coin") == null)
         {
             finalCoin.SetActive(true);
-
         }
-
-        else
-        {
-            return;
-        }
-
-
-
     }
 
 
@@ -66,7 +49,6 @@ public class PlayerBehavior : MonoBehaviour
             //Destroy coin
             coinSound.Play();
             Destroy(other.gameObject);
-            Debug.Log("Passou de nivel");
             //level complete
             congratulations.SetActive(true);
             StartCoroutine(EndAnimation());
@@ -86,42 +68,24 @@ public class PlayerBehavior : MonoBehaviour
 
         else if (other.CompareTag("NPC"))
         {
-            Debug.Log("Found Enemy");
+
             GameManager.instance.TryAgain();
         }
         else if (other.CompareTag("Spikes"))
         {
-            Debug.Log("Found Spikes");
+
             //Game over ou perder vida
             GameManager.instance.TryAgain();
         }
-        else if (other.CompareTag("Tile"))
-        {
-            groundSound.Play();
-            waterSound.Play();
-        }
 
 
     }
 
-    public void CameraFollowPlayer()
-    {
-        //grab the camera position
-        //Vector3 cameraPos = Camera.main.transform.position;
-
-        ////modify it's position according to cameraDistZ
-        //cameraPos.z = transform.position.z - cameraDistZ;
-        ////cameraPos.z = transform.position.y + cameraDistY;
-
-        ////set the camera position
-        //Camera.main.transform.position = cameraPos;
-    }
     IEnumerator EndScene()
     {
 
         yield return new WaitForSeconds(2f);
 
-        Debug.Log("chamou o EndScene");
         ChangeLevel();
 
     }

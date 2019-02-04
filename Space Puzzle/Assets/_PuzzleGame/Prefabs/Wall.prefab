@@ -36,9 +36,9 @@ GameObject:
   - component: {fileID: 4030513803958486}
   - component: {fileID: 33645379854122348}
   - component: {fileID: 23865697041448764}
-  - component: {fileID: 65743338416228304}
   - component: {fileID: 54095863018132880}
   - component: {fileID: 95534797908900598}
+  - component: {fileID: 65389265137176014}
   m_Layer: 0
   m_Name: Wall (2)
   m_TagString: Untagged
@@ -54,7 +54,7 @@ Transform:
   m_GameObject: {fileID: 1720208401189216}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 90, y: 90, z: 90}
   m_Children: []
   m_Father: {fileID: 4399563524724284}
   m_RootOrder: 0
@@ -114,7 +114,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1720208401189216}
-  m_Mesh: {fileID: 4300000, guid: 671aeeba71c544e488f76999081d53f0, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 91ae8999efda903479cf31d6b4b435dd, type: 3}
 --- !u!54 &54095863018132880
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -130,7 +130,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 1
---- !u!65 &65743338416228304
+--- !u!65 &65389265137176014
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,8 +140,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.01, y: 0.0025, z: 0.01}
+  m_Center: {x: 0.0000000013969839, y: 0.00125, z: -0.0000000018626451}
 --- !u!95 &95534797908900598
 Animator:
   serializedVersion: 3

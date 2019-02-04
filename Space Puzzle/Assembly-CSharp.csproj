@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_PuzzleGame\Scripts\CameraMovement.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\CoinController.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Enemy.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\FPSDisplay.cs" />

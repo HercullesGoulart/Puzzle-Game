@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 5b4c08e070b500740aedc6963f6ec9c2
   - enabled: 1
     path: Assets/_PuzzleGame/Scenes/Level1.unity
-    guid: 3770ad53c49fd954fabe8e4c088f10aa
+    guid: 54f5201e3cffd824f9fcc23f2918cde8
   - enabled: 1
     path: Assets/_PuzzleGame/Scenes/Level2.unity
     guid: 12826edc4a1987540b82e800da3a26db

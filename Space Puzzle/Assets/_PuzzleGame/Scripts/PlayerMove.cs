@@ -18,8 +18,8 @@ public class PlayerMove : TacticsMove
 
         if (!turn)
         {
-            //return;
-            FindSelectableTiles();
+            return;
+
             //CheckMouse();
         }
 

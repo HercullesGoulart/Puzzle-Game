@@ -8,34 +8,11 @@ public class TurnManager : MonoBehaviour
     static Queue<string> turnKey = new Queue<string>();
     static Queue<TacticsMove> turnTeam = new Queue<TacticsMove>();
 
-	// Use this for initialization
-	void Start () 
-	{
-    }
-	
+
 	// Update is called once per frame
 	void Update () 
 	{
         StartTurn();
-        //InitTeamTurnQueue();
-        /*if (turnTeam.Count == 0)
-        {
-            InitTeamTurnQueue();
-        }*/
-        //InitTeamTurnQueue();
-
-        //codigo para mudança e ativar o npc
-        /*if (turnTeam.Count > 0)
-        {
-            StartTurn();
-        }
-        else
-        {
-            string team = turnKey.Dequeue();
-            turnKey.Enqueue(team);
-            InitTeamTurnQueue();
-            StartTurn();
-        }*/
     }
 
     static void InitTeamTurnQueue()
@@ -57,23 +34,6 @@ public class TurnManager : MonoBehaviour
             turnTeam.Peek().BeginTurn();
         }
     }
-
-    //public static void EndTurn()
-    //{
-    //    TacticsMove unit = turnTeam.Dequeue();
-    //    unit.EndTurn();
-
-    //    if (turnTeam.Count > 0)
-    //    {
-    //        StartTurn();
-    //    }
-    //    else
-    //    {
-    //        string team = turnKey.Dequeue();
-    //        turnKey.Enqueue(team);
-    //        InitTeamTurnQueue();
-    //    }
-    //}
 
     public static void AddUnit(TacticsMove unit)
     {

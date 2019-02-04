@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4672836207993012}
-  - component: {fileID: 136604213489877730}
   - component: {fileID: 114413374263616084}
   m_Layer: 2
   m_Name: PlayerPositioning
@@ -209,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1153740644070002}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.8, z: 0}
+  m_LocalPosition: {x: 3, y: 0.8, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4038208571293416}
@@ -527,7 +526,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1153740644070002}
-  numeroSplash: 80
+  secSplash: 6
+  numeroSplash: 20
   splash_prefab: {fileID: 1232296931345836, guid: f7c54b9779c74754dbebbcc3774cc1da,
     type: 2}
 --- !u!114 &114308320655564068
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d6da6f29c198740a2791deeb6a1c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pos: {fileID: 0}
+  pos: {fileID: 135586609121367090}
   move: {fileID: 114308320655564068}
   player: {fileID: 1153740644070002}
 --- !u!114 &114509482220964932
@@ -591,8 +591,6 @@ MonoBehaviour:
   finalCoin: {fileID: 0}
   progress: 25
   Pb: {fileID: 0}
-  groundSound: {fileID: 82456334042152868}
-  waterSound: {fileID: 82127355978162216}
 --- !u!114 &114707617419130626
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -618,19 +616,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5222422
   m_Center: {x: 0.022686917, y: 0.024819374, z: 0}
---- !u!136 &136604213489877730
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1088317023961146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198204143787258962
 ParticleSystem:
   m_ObjectHideFlags: 1

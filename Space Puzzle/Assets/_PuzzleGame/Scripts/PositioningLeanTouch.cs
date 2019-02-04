@@ -8,15 +8,12 @@ public class PositioningLeanTouch : MonoBehaviour
     public TacticsMove move;
     public GameObject player;
     // Use this for initialization
-    void Start()
-    {
-        pos = GetComponent<Collider>();
-    }
-    private void Update()
+
+
+    void Update()
     {
         transform.position = player.transform.position;
     }
-
     public void GetTile()
     {
         RaycastHit hit;
@@ -33,6 +30,11 @@ public class PositioningLeanTouch : MonoBehaviour
         }
 
 
+    }
+    IEnumerator PlayerPosition()
+    {
+        yield return new WaitForSeconds(1f);
+        
     }
 
     public void MoveUp()
