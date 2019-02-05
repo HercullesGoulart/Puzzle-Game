@@ -14,8 +14,6 @@ public class PlayerMove : TacticsMove
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward);
-
         if (!turn)
         {
             return;

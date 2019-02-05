@@ -81,7 +81,7 @@ public class TacticsMove : MonoBehaviour
         process.Enqueue(currentTile);
         currentTile.visited = true;
         //currentTile.parent = ??  leave as null 
-
+        selectableTiles.Clear();
         while (process.Count > 0)
         {
             Tile t = process.Dequeue();
