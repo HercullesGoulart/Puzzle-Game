@@ -6,24 +6,20 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    // score of the player
-    public int score = 0;
-    //high score of the game
-    public int Highscore = 0;
-    //current level
-    public int currentLevel = 1;
-    //how levels there are
-    public int highestLevel = 2;
     //HUD manager
     HudManager hudManager;
 
     Pause pause;
+    public int currentLevel=0;
 
     //static instance of the GM can be acessed from anywhere
     public static GameManager instance;
 
     public static Tile instanceTile;
-
+    private void Start()
+    {
+        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+    }
     void Awake()
     {
         //check that it exists
@@ -46,57 +42,45 @@ public class GameManager : MonoBehaviour
         hudManager = FindObjectOfType<HudManager>();
     }
 
-    //increase the player score
-    public void IncreaseScore(int amount)
-    {
-        score += amount;
-        //update the HUD
-        if (hudManager != null)
-        {
-            hudManager.ResetHud();
-        }
-
-        //show the new score
-        //print("new score:" + score);
-        if (score > Highscore)
-        {
-            //save the new Highscore
-            Highscore = score;
-
-            //se for ativar highscore
-            //print("New record!" + Highscore);
-        }
-
-    }
-    public void ResetGame()
-    {
-        //reset our score
-        score = 0;
-        //set the current level to 1
-        currentLevel = 1;
-        //load the level 1
-        SceneManager.LoadScene("Level1");
-    }
     public void TryAgain()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
     //send the player to the next level
+    public void StartLevel()
+    {
+
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+
+        SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
+        //SceneManager.LoadScene("1");
+       // Debug.Log("Tentando carregar a cena");
+
+
+    }
     public void IncreaseLevel()
     {
 
+        
         currentLevel++;
-        SceneManager.LoadScene("Level" + currentLevel);
+
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        SceneManager.LoadScene(currentLevel);
+
         //trying to activate player turn
-    }
-    public void GameOver()
-    {
-        SceneManager.LoadScene("GameOver");
     }
     public void QuitGame()
     {
         Application.Quit();
 
+    }
+    public void ReturnLevel()
+    {
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+        currentLevel--;
+
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        SceneManager.LoadScene(currentLevel);
     }
 }

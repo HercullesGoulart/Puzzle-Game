@@ -12,7 +12,7 @@ public class PositioningLeanTouch : MonoBehaviour
 
     void Update()
     {
-        transform.position = player.transform.position;
+        transform.position = player.transform.position + new Vector3(0, 0.3f, 0);
     }
     public void GetTile()
     {
@@ -20,21 +20,14 @@ public class PositioningLeanTouch : MonoBehaviour
         if (Physics.Raycast(transform.position, -transform.up, out hit))
         {
             Tile touch = hit.transform.GetComponent<Tile>();
-
+            
             if (touch.selectable)
             {
                 move.MoveToTile(touch);
-
             }
-
         }
 
 
-    }
-    IEnumerator PlayerPosition()
-    {
-        yield return new WaitForSeconds(1f);
-        
     }
 
     public void MoveUp()

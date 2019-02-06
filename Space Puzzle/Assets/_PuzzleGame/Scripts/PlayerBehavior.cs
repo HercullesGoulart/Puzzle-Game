@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -16,7 +17,6 @@ public class PlayerBehavior : MonoBehaviour
     public ProgressBar Pb;
 
 
-
     void Start()
     {
         Pb.BarValue = 0;
@@ -28,6 +28,8 @@ public class PlayerBehavior : MonoBehaviour
 
         progress = 100 / totalCoins;
 
+
+
     }
     void Update()
     {
@@ -35,6 +37,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             finalCoin.SetActive(true);
         }
+
     }
 
 
@@ -43,9 +46,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (other.CompareTag("FinalCoin"))
         {
-            GameManager.instance.IncreaseScore(1);
-
-
+            PlayerPrefs.SetInt("CurrentLevel",SceneManager.GetActiveScene().buildIndex);
             //Destroy coin
             coinSound.Play();
             Destroy(other.gameObject);
@@ -57,7 +58,6 @@ public class PlayerBehavior : MonoBehaviour
         }
         if (other.CompareTag("Coin"))
         {
-            GameManager.instance.IncreaseScore(1);
 
 
             //Destroy coin
@@ -87,6 +87,7 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ChangeLevel();
+        //LevelCleared();
 
     }
     IEnumerator EndAnimation()
@@ -102,4 +103,5 @@ public class PlayerBehavior : MonoBehaviour
     {
         GameManager.instance.IncreaseLevel();
     }
+ 
 }
