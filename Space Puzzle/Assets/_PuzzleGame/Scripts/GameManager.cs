@@ -10,16 +10,12 @@ public class GameManager : MonoBehaviour
     HudManager hudManager;
 
     Pause pause;
-    public int currentLevel=0;
 
     //static instance of the GM can be acessed from anywhere
     public static GameManager instance;
 
     public static Tile instanceTile;
-    private void Start()
-    {
-        currentLevel = PlayerPrefs.GetInt("CurrentLevel");
-    }
+
     void Awake()
     {
         //check that it exists
@@ -50,19 +46,23 @@ public class GameManager : MonoBehaviour
     //send the player to the next level
     public void StartLevel()
     {
+        if (PlayerPrefs.GetInt("CurrentLevel".ToString()) == 0)
+        {
+            int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+            currentLevel++;
 
-        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
-
-        SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
-        //SceneManager.LoadScene("1");
-       // Debug.Log("Tentando carregar a cena");
-
-
+            PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+            SceneManager.LoadScene(currentLevel);
+        }
+        else
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
+        }
+        
     }
     public void IncreaseLevel()
     {
-
-        
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
         currentLevel++;
 
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);

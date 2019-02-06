@@ -37,7 +37,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             finalCoin.SetActive(true);
         }
-
+        
     }
 
 
