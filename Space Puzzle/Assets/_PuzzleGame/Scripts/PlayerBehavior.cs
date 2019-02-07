@@ -84,12 +84,6 @@ public class PlayerBehavior : MonoBehaviour
                 GameManager.instance.TryAgain();
             }
         }
-        if (isRuning == false)
-        {
-            Debug.Log("isruning false");
-        }
-        
-
 
     }
 
