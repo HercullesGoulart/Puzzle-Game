@@ -16,6 +16,9 @@ public class PlayerBehavior : MonoBehaviour
 
     public ProgressBar Pb;
 
+    bool isRuning= true;
+
+
 
     void Start()
     {
@@ -28,8 +31,6 @@ public class PlayerBehavior : MonoBehaviour
 
         progress = 100 / totalCoins;
 
-
-
     }
     void Update()
     {
@@ -39,44 +40,55 @@ public class PlayerBehavior : MonoBehaviour
         }
         
     }
-
+    
 
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("FinalCoin"))
+        if(isRuning == true)
         {
-            PlayerPrefs.SetInt("CurrentLevel",SceneManager.GetActiveScene().buildIndex);
-            //Destroy coin
-            coinSound.Play();
-            Destroy(other.gameObject);
-            //level complete
-            congratulations.SetActive(true);
-            StartCoroutine(EndAnimation());
-            StartCoroutine(EndScene());
-            
+            if (other.CompareTag("FinalCoin"))
+            {
+
+                PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+
+                //Destroy coin
+                coinSound.Play();
+                isRuning = false;
+                Destroy(other.gameObject);
+                //level complete
+                congratulations.SetActive(true);
+                StartCoroutine(EndAnimation());
+                StartCoroutine(EndScene());
+
+            }
+            if (other.CompareTag("Coin"))
+            {
+
+
+                //Destroy coin
+                coinSound.Play();
+                Destroy(other.gameObject);
+                Pb.BarValue = Pb.BarValue + progress;
+            }
+
+            else if (other.CompareTag("NPC"))
+            {
+
+                GameManager.instance.TryAgain();
+            }
+            else if (other.CompareTag("Spikes"))
+            {
+
+                //Game over ou perder vida
+                GameManager.instance.TryAgain();
+            }
         }
-        if (other.CompareTag("Coin"))
+        if (isRuning == false)
         {
-
-
-            //Destroy coin
-            coinSound.Play();
-            Destroy(other.gameObject);
-            Pb.BarValue = Pb.BarValue + progress;
+            Debug.Log("isruning false");
         }
-
-        else if (other.CompareTag("NPC"))
-        {
-
-            GameManager.instance.TryAgain();
-        }
-        else if (other.CompareTag("Spikes"))
-        {
-
-            //Game over ou perder vida
-            GameManager.instance.TryAgain();
-        }
+        
 
 
     }
@@ -87,6 +99,7 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ChangeLevel();
+        
         //LevelCleared();
 
     }
