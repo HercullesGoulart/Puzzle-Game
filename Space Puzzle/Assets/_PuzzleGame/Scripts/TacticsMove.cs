@@ -15,9 +15,9 @@ public class TacticsMove : MonoBehaviour
     Tile currentTile;
 
     public bool moving = true;
-    public int move = 5;
+    int move = 16;
     public float jumpHeight = 2;
-    public float moveSpeed = 2;
+    float moveSpeed = 4;
     public float jumpVelocity = 4.5f;
 
     Vector3 velocity = new Vector3();
