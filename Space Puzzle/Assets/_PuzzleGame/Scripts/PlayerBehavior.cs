@@ -13,10 +13,11 @@ public class PlayerBehavior : MonoBehaviour
     public AudioSource coinSound;
     public GameObject finalCoin;
     public int progress;
-
+    int numberOfCoins;
+    int coins = 0;
     public ProgressBar Pb;
 
-    bool isRuning= true;
+    bool isRuning = true;
 
 
 
@@ -25,7 +26,7 @@ public class PlayerBehavior : MonoBehaviour
         Pb.BarValue = 0;
 
         GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
-        int numberOfCoins = coins.Length;
+        numberOfCoins = coins.Length;
 
         int totalCoins = numberOfCoins + 1;
 
@@ -38,17 +39,26 @@ public class PlayerBehavior : MonoBehaviour
         {
             finalCoin.SetActive(true);
         }
-        
+
     }
-    
+
+    void CheckCoins()
+    {
+        if (coins == numberOfCoins)
+        {
+            finalCoin.SetActive(true);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
 
-        if(isRuning == true)
+        if (isRuning == true)
         {
+            
             if (other.CompareTag("FinalCoin"))
             {
+
 
                 PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
 
@@ -64,8 +74,8 @@ public class PlayerBehavior : MonoBehaviour
             }
             if (other.CompareTag("Coin"))
             {
-
-
+                coins++;
+                CheckCoins();
                 //Destroy coin
                 coinSound.Play();
                 Destroy(other.gameObject);
@@ -93,7 +103,7 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ChangeLevel();
-        
+
         //LevelCleared();
 
     }
@@ -110,5 +120,5 @@ public class PlayerBehavior : MonoBehaviour
     {
         GameManager.instance.IncreaseLevel();
     }
- 
+
 }

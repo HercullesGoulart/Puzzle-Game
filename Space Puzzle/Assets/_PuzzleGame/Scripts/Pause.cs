@@ -13,10 +13,6 @@ public class Pause : MonoBehaviour
     {
         pausePanel.SetActive(false);
     }
-    void Update()
-    {
-
-    }
     public void PauseGame()
     {
         Time.timeScale = 0;

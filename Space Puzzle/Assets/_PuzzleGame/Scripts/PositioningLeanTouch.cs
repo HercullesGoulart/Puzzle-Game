@@ -9,10 +9,9 @@ public class PositioningLeanTouch : MonoBehaviour
     public GameObject player;
     // Use this for initialization
 
-
-    void Update()
+    private void Start()
     {
-        transform.position = player.transform.position + new Vector3(0, 0.3f, 0);
+        PlayerSpot();
     }
     public void GetTile()
     {
@@ -24,10 +23,19 @@ public class PositioningLeanTouch : MonoBehaviour
             if (touch.selectable)
             {
                 move.MoveToTile(touch);
+                PlayerSpot();
+            }
+            else
+            {
+                PlayerSpot();
             }
         }
 
 
+    }
+    public void PlayerSpot()
+    {
+        transform.position = player.transform.position;
     }
 
     public void MoveUp()

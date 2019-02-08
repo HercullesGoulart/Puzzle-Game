@@ -9,7 +9,7 @@ public class Splash : MonoBehaviour
 
 
     int secSplash= 6;
-    int numeroSplash = 10;
+    int numeroSplash = 30;
     public GameObject splash_prefab;
     List<GameObject> SplashList;
 
@@ -25,10 +25,6 @@ public class Splash : MonoBehaviour
 
         }
 
-    }
-    void Update()
-    {
-        
     }
    
 
