@@ -81,11 +81,6 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\Tile.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TurnManager.cs" />
     <Compile Include="Assets\Congratulations.cs" />
-    <Compile Include="Assets\Dungeon Pack\Scripts\ChestDemo.cs" />
-    <Compile Include="Assets\Dungeon Pack\Scripts\MaterialMover.cs" />
-    <Compile Include="Assets\Dungeon Pack\Scripts\Rotator.cs" />
-    <Compile Include="Assets\Dungeon Pack\Scripts\SpikeTrapDemo.cs" />
-    <Compile Include="Assets\Dungeon Pack\Scripts\TrapDoorDemo.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraMove.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraZoom.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCanvasArrow.cs" />
