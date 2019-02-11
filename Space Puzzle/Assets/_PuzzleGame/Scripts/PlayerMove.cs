@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerMove : TacticsMove
 {
-    PositioningLeanTouch pos;
     // Use this for initialization
     void Start()
     {
@@ -18,7 +17,6 @@ public class PlayerMove : TacticsMove
         {
             return;
 
-            //CheckMouse();
         }
 
         if (!moving)
