@@ -17,7 +17,7 @@ public class TacticsMove : MonoBehaviour
     public bool moving = true;
     int move = 16;
     public float jumpHeight = 2;
-    float moveSpeed = 4;
+    float moveSpeed = 10;
     public float jumpVelocity = 4.5f;
 
     Vector3 velocity = new Vector3();
@@ -129,7 +129,7 @@ public class TacticsMove : MonoBehaviour
             //Calculate the unit's position on top of the target tile
             target.y += halfHeight + t.GetComponent<Collider>().bounds.extents.y;
 
-            if (Vector3.Distance(transform.position, target) >= 0.05f)
+            if (Vector3.Distance(transform.position, target) >= 0.6f)
             {
                 bool jump = transform.position.y != target.y;
 

@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/spacepuzzle.apk
+C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Hyperpuzzle.apk
 SceneListBegin?
 Assets/_PuzzleGame/Scenes/MainMenu.unity
 Assets/_PuzzleGame/Scenes/1.unity
@@ -30,9 +30,11 @@ Assets/_PuzzleGame/Scenes/24.unity
 Assets/_PuzzleGame/Scenes/25.unity
 Assets/_PuzzleGame/Scenes/26.unity
 Assets/_PuzzleGame/Scenes/27.unity
+Assets/_PuzzleGame/Scenes/28.unity
+Assets/_PuzzleGame/Scenes/29.unity
+Assets/_PuzzleGame/Scenes/30.unity
 Assets/_PuzzleGame/Scenes/GameOver.unity
 SceneListEnd?
-afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Rotator
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TacticsCamera
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -156,10 +158,8 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 e4a1a2881f247d4d5c2391a545375853 Assembly-CSharp.dll:PolygonArsenal.PolygonSoundSpawn
-c37b1a2676ee93f48d4ca17f8273c4f1 Assembly-CSharp.dll:.TrapDoorDemo
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 6c1ab29ddfcd6014cccb0aadc55da469 Assembly-CSharp.dll:Lean.Touch.LeanPlane
-9669178b8ee47e79141ed8519e9595fb Assembly-CSharp.dll:.MaterialMover
 17ac82beb4f998a95da5edff431f5d0f Assembly-CSharp.dll:Lean.Touch.LeanFingerSwipe
 babcddaca0e075af60191ddd2b395059 Assembly-CSharp.dll:.ProgressBar
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
@@ -290,7 +290,6 @@ e17c8be3940ae74e1fd73f05b1177d5d Assembly-CSharp.dll:.TacticsMove
 0e78074dc9982c5b5d2c5e112a658d35 Assembly-CSharp.dll:Lean.Touch.LeanScale
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
-eeb36c005b6f47fc674ed3f1fe791174 Assembly-CSharp.dll:.ChestDemo
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 b5aaf686465544e9e949e46e293afee1 Assembly-CSharp.dll:.PolygonOrbit
 049da38e04b44d779517153fb9e33896 Assembly-CSharp.dll:.Demo
@@ -306,7 +305,6 @@ afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Player
 d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 4463baa8f95e92ea8fb1196f72f4d133 Assembly-CSharp.dll:Lean.Touch.LeanFingerTrail
 9277194e3007f91c41cc4dd392ebc5cb Assembly-CSharp.dll:Lean.Touch.LeanSelectableGraphicColor
-4d82bda03a5eca423825059e15f5eb92 Assembly-CSharp.dll:.SpikeTrapDemo
 afa0d13b710ea73b6e3fdb349904f7db Assembly-CSharp.dll:Lean.Touch.LeanTranslate
 d85337dbc4a074cb8f2a94792eacdd21 Assembly-CSharp.dll:.HomeUIManager
 8e5e00ca42eeebc1eae2f91fabb1ee02 Assembly-CSharp.dll:PolygonArsenal.PolygonButtonScript

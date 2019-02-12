@@ -9,25 +9,23 @@ public class PositioningLeanTouch : MonoBehaviour
     public GameObject player;
     // Use this for initialization
 
-    private void Start()
+    void Update()
     {
         PlayerSpot();
     }
+
+
     public void GetTile()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -transform.up, out hit))
         {
             Tile touch = hit.transform.GetComponent<Tile>();
-            
+
             if (touch.selectable)
             {
                 move.MoveToTile(touch);
-                PlayerSpot();
-            }
-            else
-            {
-                PlayerSpot();
+
             }
         }
 
