@@ -12,6 +12,8 @@ public class Pause : MonoBehaviour
     void Start()
     {
         pausePanel.SetActive(false);
+
+        
     }
     public void PauseGame()
     {
