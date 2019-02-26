@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class RestartLevel : MonoBehaviour
 {
-    GameManager instance;
-
-
     public void TryAgain()
     {
         Scene scene = SceneManager.GetActiveScene();
@@ -18,8 +15,9 @@ public class RestartLevel : MonoBehaviour
         Application.Quit();
 
     }
-    public void ChangeLevel()
+    public void ResetandQuit()
     {
-        GameManager.instance.IncreaseLevel();
+        PlayerPrefs.SetInt("CurrentLevel", 1);
+        Application.Quit();
     }
 }

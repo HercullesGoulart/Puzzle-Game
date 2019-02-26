@@ -8,8 +8,8 @@ public class Splash : MonoBehaviour
     public GameObject player;
 
 
-    public int secSplash= 4;
-    public int numeroSplash = 20;
+    int secSplash= 6;
+    int numeroSplash = 30;
     public GameObject splash_prefab;
     List<GameObject> SplashList;
 
@@ -26,20 +26,7 @@ public class Splash : MonoBehaviour
         }
 
     }
-    void Update()
-    {
-        transform.rotation = player.transform.rotation;
-        int rotation = Random.Range(0, 5) * 90;
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation, transform.eulerAngles.z); 
-        transform.position = player.transform.position + new Vector3(0, -0.21f, 0);
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Tile"))
-        {
-            InstantiateSplash();
-        }
-    }
+   
 
     public void InstantiateSplash()
     {
@@ -47,12 +34,20 @@ public class Splash : MonoBehaviour
         {
             if (!SplashList[i].gameObject.activeInHierarchy)
             {
+                SplashPosition();
                 ResetObj(SplashList[i]);
                 SplashList[i].gameObject.SetActive(true);
                 StartCoroutine(waitSeconds(SplashList[i]));
                 break;
             }
         }
+    }
+    void SplashPosition()
+    {
+        transform.rotation = player.transform.rotation;
+        int rotation = Random.Range(0, 5) * 90;
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation, transform.eulerAngles.z);
+        transform.position = player.transform.position + new Vector3(0, -0.21f, 0);
     }
 
     IEnumerator waitSeconds(GameObject targetDisable)

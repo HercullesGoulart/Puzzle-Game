@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -12,8 +13,11 @@ public class PlayerBehavior : MonoBehaviour
     public AudioSource coinSound;
     public GameObject finalCoin;
     public int progress;
-
+    int numberOfCoins;
+    int coins = 0;
     public ProgressBar Pb;
+
+    bool isRuning = true;
 
 
 
@@ -22,7 +26,7 @@ public class PlayerBehavior : MonoBehaviour
         Pb.BarValue = 0;
 
         GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
-        int numberOfCoins = coins.Length;
+        numberOfCoins = coins.Length;
 
         int totalCoins = numberOfCoins + 1;
 
@@ -35,49 +39,61 @@ public class PlayerBehavior : MonoBehaviour
         {
             finalCoin.SetActive(true);
         }
+
     }
 
+    void CheckCoins()
+    {
+        if (coins == numberOfCoins)
+        {
+            finalCoin.SetActive(true);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.CompareTag("FinalCoin"))
+        if (isRuning == true)
         {
-            GameManager.instance.IncreaseScore(1);
-
-
-            //Destroy coin
-            coinSound.Play();
-            Destroy(other.gameObject);
-            //level complete
-            congratulations.SetActive(true);
-            StartCoroutine(EndAnimation());
-            StartCoroutine(EndScene());
             
+            if (other.CompareTag("FinalCoin"))
+            {
+
+
+                PlayerPrefs.SetInt("CurrentLevel", SceneManager.GetActiveScene().buildIndex);
+
+                //Destroy coin
+                coinSound.Play();
+                isRuning = false;
+                Destroy(other.gameObject);
+                //level complete
+                congratulations.SetActive(true);
+                StartCoroutine(EndAnimation());
+                StartCoroutine(EndScene());
+
+            }
+            if (other.CompareTag("Coin"))
+            {
+                coins++;
+                CheckCoins();
+                //Destroy coin
+                coinSound.Play();
+                Destroy(other.gameObject);
+                Pb.BarValue = Pb.BarValue + progress;
+            }
+
+            else if (other.CompareTag("NPC"))
+            {
+
+                GameManager.instance.TryAgain();
+            }
+            else if (other.CompareTag("Spikes"))
+            {
+
+                //Game over ou perder vida
+                GameManager.instance.TryAgain();
+            }
         }
-        if (other.CompareTag("Coin"))
-        {
-            GameManager.instance.IncreaseScore(1);
-
-
-            //Destroy coin
-            coinSound.Play();
-            Destroy(other.gameObject);
-            Pb.BarValue = Pb.BarValue + progress;
-        }
-
-        else if (other.CompareTag("NPC"))
-        {
-
-            GameManager.instance.TryAgain();
-        }
-        else if (other.CompareTag("Spikes"))
-        {
-
-            //Game over ou perder vida
-            GameManager.instance.TryAgain();
-        }
-
 
     }
 
@@ -87,6 +103,8 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ChangeLevel();
+
+        //LevelCleared();
 
     }
     IEnumerator EndAnimation()
@@ -102,4 +120,5 @@ public class PlayerBehavior : MonoBehaviour
     {
         GameManager.instance.IncreaseLevel();
     }
+
 }

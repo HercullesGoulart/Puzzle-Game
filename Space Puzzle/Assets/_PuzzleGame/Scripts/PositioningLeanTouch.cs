@@ -9,11 +9,12 @@ public class PositioningLeanTouch : MonoBehaviour
     public GameObject player;
     // Use this for initialization
 
-
     void Update()
     {
-        transform.position = player.transform.position;
+        PlayerSpot();
     }
+
+
     public void GetTile()
     {
         RaycastHit hit;
@@ -26,15 +27,13 @@ public class PositioningLeanTouch : MonoBehaviour
                 move.MoveToTile(touch);
 
             }
-
         }
 
 
     }
-    IEnumerator PlayerPosition()
+    public void PlayerSpot()
     {
-        yield return new WaitForSeconds(1f);
-        
+        transform.position = player.transform.position;
     }
 
     public void MoveUp()

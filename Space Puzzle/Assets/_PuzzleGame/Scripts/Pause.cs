@@ -12,16 +12,15 @@ public class Pause : MonoBehaviour
     void Start()
     {
         pausePanel.SetActive(false);
-    }
-    void Update()
-    {
 
+        
     }
     public void PauseGame()
     {
         Time.timeScale = 0;
         pausePanel.SetActive(true);
         //Disable scripts that still work while timescale is set to 0
+        Debug.Log("Game Pausado");
     }
     public void ContinueGame()
     {
