@@ -249,19 +249,19 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.0f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements">
-      <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
+      <HintPath>C:/Users/Herculles Goulart/Documents/Duality/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Advertisements.Editor">
-      <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
+      <HintPath>C:/Users/Herculles Goulart/Documents/Duality/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/Herculles Goulart/Documents/Duality/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Herculles Goulart/Documents/Duality/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/Herculles Goulart/Documents/Duality/Puzzle-Game/Space Puzzle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.0f1/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -321,6 +321,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_PuzzleGame\Scripts\CoinController.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\Congratulations.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Enemy.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\FPSDisplay.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\GameManager.cs" />
@@ -330,6 +331,7 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\NPCMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Pause.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Player.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\PlayerAudio.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PlayerBehavior.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\PositioningLeanTouch.cs" />
@@ -339,7 +341,6 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\TacticsMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Tile.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\TurnManager.cs" />
-    <Compile Include="Assets\Congratulations.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraMove.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCameraZoom.cs" />
     <Compile Include="Assets\Lean\Touch\Examples\Scripts\LeanCanvasArrow.cs" />
@@ -373,7 +374,6 @@
     <Compile Include="Assets\Lean\Touch\Scripts\LeanGesture.cs" />
     <Compile Include="Assets\Lean\Touch\Scripts\LeanSnapshot.cs" />
     <Compile Include="Assets\Lean\Touch\Scripts\LeanTouch.cs" />
-    <Compile Include="Assets\PlayerAudio.cs" />
     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonBeamScript.cs" />
     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonButtonScript.cs" />
     <Compile Include="Assets\Polygon Arsenal\Demo\Scripts\PolygonFireProjectile.cs" />

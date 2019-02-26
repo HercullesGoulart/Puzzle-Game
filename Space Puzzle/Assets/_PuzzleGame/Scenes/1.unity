@@ -1346,6 +1346,18 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.3066038
       objectReference: {fileID: 0}
+    - target: {fileID: 1173680912, guid: ff838754c83390346aa92d63bb021c05, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.13052616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1173680912, guid: ff838754c83390346aa92d63bb021c05, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9914449
+      objectReference: {fileID: 0}
+    - target: {fileID: 1173680912, guid: ff838754c83390346aa92d63bb021c05, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff838754c83390346aa92d63bb021c05, type: 3}
 --- !u!1001 &1737287521

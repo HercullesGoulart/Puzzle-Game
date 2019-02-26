@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Users/Herculles Goulart/Documents/Puzzle-Game/Space Puzzle/Hyperpuzzle.apk
+C:/Users/Herculles Goulart/Documents/Duality/Puzzle-Game/Space Puzzle/Hyperpuzzle.apk
 SceneListBegin?
 Assets/_PuzzleGame/Scenes/MainMenu.unity
 Assets/_PuzzleGame/Scenes/1.unity
