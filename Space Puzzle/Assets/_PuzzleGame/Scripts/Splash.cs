@@ -26,7 +26,6 @@ public class Splash : MonoBehaviour
         }
 
     }
-   
 
     public void InstantiateSplash()
     {
@@ -47,12 +46,12 @@ public class Splash : MonoBehaviour
         transform.rotation = player.transform.rotation;
         int rotation = Random.Range(0, 5) * 90;
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation, transform.eulerAngles.z);
-        transform.position = player.transform.position + new Vector3(0, -0.21f, 0);
+        transform.position = player.transform.position + new Vector3(0f,-0.3f,0f);
     }
 
     IEnumerator waitSeconds(GameObject targetDisable)
     {
-        yield return new WaitForSeconds(secSplash);
+        yield return new WaitForSeconds(secSplash-1);
         targetDisable.SetActive(false);
     }
 

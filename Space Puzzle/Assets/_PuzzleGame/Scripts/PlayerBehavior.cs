@@ -64,6 +64,7 @@ public class PlayerBehavior : MonoBehaviour
 
                 //Destroy coin
                 coinSound.Play();
+                Pb.BarValue = Pb.BarValue + progress;
                 isRuning = false;
                 Destroy(other.gameObject);
                 //level complete
