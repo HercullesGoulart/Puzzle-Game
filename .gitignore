@@ -38,3 +38,4 @@ sysinfo.txt
 
 # Crashlytics generated file
 Assets/StreamingAssets/crashlytics-build.properties
+*.csproj~f63a4e36150a8c90fb43198a49deb0206a11931a
