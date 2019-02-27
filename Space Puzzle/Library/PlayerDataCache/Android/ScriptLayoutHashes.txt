@@ -35,6 +35,8 @@ Assets/_PuzzleGame/Scenes/29.unity
 Assets/_PuzzleGame/Scenes/30.unity
 Assets/_PuzzleGame/Scenes/GameOver.unity
 SceneListEnd?
+711c2fe50e74bc279b4127e1f5b06713 Assembly-CSharp.dll:.Paths
+550e90d2ae9701ca11e6e289d1cac642 Assembly-CSharp.dll:.UGUI
 984dcc0ba3707b7691fbdca8ff508d28 Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TacticsCamera
 01aa15e337e3a9c62f15153dfac6d589 Unity.TextMeshPro.dll:TMPro.TMP_Dropdown
@@ -125,6 +127,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
+43acb21bc19b845ec9a1241bc6b4f861 Assembly-CSharp.dll:.Materials
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GameManager
 fb087e0c098f6c9ec21babfda7cae38d Assembly-CSharp.dll:Lean.Touch.LeanRotateCustomAxis
 a179cc6028b6b0a1d6d9e8ae0b32397f Assembly-CSharp.dll:Lean.Touch.LeanCanvasArrow
@@ -157,6 +160,7 @@ e0ee4b3d4e27318934cc940a969d3d96 UnityEngine.Networking.dll:UnityEngine.Networki
 ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 9b895dcabbc1faf095c000c32d471fd0 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
+ebd0e1c704bd5883104d7ed2becd349e Assembly-CSharp.dll:.Basics
 e4a1a2881f247d4d5c2391a545375853 Assembly-CSharp.dll:PolygonArsenal.PolygonSoundSpawn
 d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 6c1ab29ddfcd6014cccb0aadc55da469 Assembly-CSharp.dll:Lean.Touch.LeanPlane
@@ -237,12 +241,17 @@ ae91c545dea6ac849dd81c4b660c68ca Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 a73cc7e0d8575dd7105e0f0616a7253a Assembly-CSharp.dll:Lean.Touch.LeanOpenUrl
+9cf6ab2a9a67af1d8e485d128af824f2 Assembly-CSharp.dll:.PlayerAnimation
 b3ab2106268377ffe25dd18ac23dca28 Unity.TextMeshPro.dll:TMPro.TMP_Asset
 a32b3b81f3e005d590710545b6d043bf Assembly-CSharp.dll:Lean.Touch.LeanRotate
+0d85f4fda1e0e70cd92c084d12f05cdc Assembly-CSharp.dll:.Follow
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.Analytics.Editor.dll:UnityEditor.Analytics.AnalyticsEventTrackerEditor
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 0e6f910123755ed538f1970226daa5bb Assembly-CSharp.dll:.FPSDisplay
 ed988f8920a537cab7a5c21a941f9a59 Assembly-CSharp.dll:.PlayerAudio
+db974ebabe9bb88bc690b548c996f239 Assembly-CSharp.dll:.Sequences
+704dcd31abc789439bc3f3cd10b58c2b DOTween.dll:DG.Tweening.Core.DOTweenComponent
+49cbb3369dc9b7b81a56e2f87e67a737 DOTween.dll:DG.Tweening.Core.DOTweenSettings
 e888ef4305b8fac9cd5510fefa0636bf Assembly-CSharp.dll:PolygonArsenal.PolygonFireProjectile
 4fd8bf02e3089425d3502e26c44ba31a Unity.TextMeshPro.dll:TMPro.TextContainer
 8ec0e792978bd03f071b8a441f3cbb19 Assembly-CSharp.dll:PolygonArsenal.PolygonLoopScript
@@ -308,6 +317,7 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 afa0d13b710ea73b6e3fdb349904f7db Assembly-CSharp.dll:Lean.Touch.LeanTranslate
 d85337dbc4a074cb8f2a94792eacdd21 Assembly-CSharp.dll:.HomeUIManager
 8e5e00ca42eeebc1eae2f91fabb1ee02 Assembly-CSharp.dll:PolygonArsenal.PolygonButtonScript
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DragTarget
 37eedbe172a703ac5f0797076add2b78 Assembly-CSharp.dll:Lean.Touch.LeanFingerUp
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
@@ -385,4 +395,5 @@ ae91c545dea6ac849dd81c4b660c68ca Vuforia.UnityExtensions.dll:Vuforia.VuforiaConf
 69167579cf7fcbb2676fc1e675963dcd Vuforia.UnityExtensions.dll:Vuforia.VuMarkBehaviour
 fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
+258358db7e86d293eecc47ec1b46743e Assembly-CSharp.dll:.CustomPluginExampleBrain
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Enemy
