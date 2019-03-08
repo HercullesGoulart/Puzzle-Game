@@ -330,6 +330,7 @@
     <Compile Include="Assets\_PuzzleGame\Scripts\GameManager.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\HomeUIManager.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\HudManager.cs" />
+    <Compile Include="Assets\_PuzzleGame\Scripts\MainMenuPlayerAnimation.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\MenuScript.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\NPCMove.cs" />
     <Compile Include="Assets\_PuzzleGame\Scripts\Pause.cs" />

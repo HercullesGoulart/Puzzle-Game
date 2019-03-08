@@ -7,10 +7,10 @@ using DG.Tweening;
 public class MainMenuPlayerAnimation : MonoBehaviour
 {
 
-    [SerializeField] private float DurationScaleUp1 = 0.02f;
-    [SerializeField] private float DurationScaleDown1 = 0.03f;
-    [SerializeField] float playerJumpSpeed1 = .14f;
-    [SerializeField] float playerStrechOffset1 = 0.9f;
+    [SerializeField] private float DurationScaleUp = 0.02f;
+    [SerializeField] private float DurationScaleDown = 0.03f;
+    [SerializeField] float playerJumpSpeed = .18f;
+    [SerializeField] float playerStrechOffset = 0.9f;
 
     public AudioSource playerSound;
     public Splash splashCall;
@@ -21,21 +21,21 @@ public class MainMenuPlayerAnimation : MonoBehaviour
 
         Vector3 upDirection = Vector3.up;
 
-        transform.DOLocalMoveY(0.2f, playerJumpSpeed1).SetLoops(-1, LoopType.Yoyo);
-        transform.DOBlendableLocalMoveBy(new Vector3(.2f, 0, 0), playerJumpSpeed1 * 2).SetLoops(-1, LoopType.Yoyo);
+        transform.DOLocalMoveY(0.3f, playerJumpSpeed).SetLoops(-1, LoopType.Yoyo);
+        transform.DOBlendableLocalMoveBy(new Vector3(.2f, 0, 0), playerJumpSpeed * 2).SetLoops(-1, LoopType.Yoyo);
 
 
 
-        float startDelay = playerJumpSpeed1 * 2;
-        InvokeRepeating("Strech", startDelay * playerStrechOffset1, startDelay);
+        float startDelay = playerJumpSpeed * 2;
+        InvokeRepeating("Strech", startDelay * playerStrechOffset, startDelay);
 
     }
 
     public void Strech()
     {
         Sequence s = DOTween.Sequence();
-        s.Append(transform.DOScale(new Vector3(1.1f, .7f, 1.1f), DurationScaleDown1));
-        s.Insert(DurationScaleDown1, transform.DOScale(new Vector3(1, 1f, 1), DurationScaleUp1));
+        s.Append(transform.DOScale(new Vector3(1.1f, .7f, 1.1f), DurationScaleDown));
+        s.Insert(DurationScaleDown, transform.DOScale(new Vector3(1, 1f, 1), DurationScaleUp));
         SoundandSplash();
 
     }

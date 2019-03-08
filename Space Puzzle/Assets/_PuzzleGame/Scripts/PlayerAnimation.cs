@@ -7,7 +7,7 @@ public class PlayerAnimation : MonoBehaviour
 {
     [SerializeField] private float DurationScaleUp = 0.02f;
     [SerializeField] private float DurationScaleDown = 0.03f;
-    [SerializeField] float playerJumpSpeed = .14f;
+    [SerializeField] float playerJumpSpeed = .18f;
     [SerializeField] float playerStrechOffset = 0.9f;
 
     public AudioSource playerSound;

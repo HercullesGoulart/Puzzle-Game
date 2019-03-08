@@ -2190,7 +2190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4598835748889636, guid: a9d878b02938dfb4f812d032e61c2388, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3240,6 +3240,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1317779812005362, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 3}
+      propertyPath: m_Name
+      value: IncreaseLvl
+      objectReference: {fileID: 0}
     - target: {fileID: 114996786250481990, guid: 99f4fc269c1896f43be968f0fdeef1f0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3250,10 +3254,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IncreaseLevel
-      objectReference: {fileID: 0}
-    - target: {fileID: 1317779812005362, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 3}
-      propertyPath: m_Name
-      value: IncreaseLvl
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 3}

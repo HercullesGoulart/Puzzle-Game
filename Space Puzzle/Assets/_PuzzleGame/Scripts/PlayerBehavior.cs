@@ -16,7 +16,9 @@ public class PlayerBehavior : MonoBehaviour
     int numberOfCoins;
     int coins = 0;
     public ProgressBar Pb;
-
+    public float fallSpeed = 8.0f;
+    public bool holePlayer = false;
+    public HoleQuad hole;
     bool isRuning = true;
 
 
@@ -55,7 +57,7 @@ public class PlayerBehavior : MonoBehaviour
 
         if (isRuning == true)
         {
-            
+
             if (other.CompareTag("FinalCoin"))
             {
 
@@ -93,6 +95,17 @@ public class PlayerBehavior : MonoBehaviour
 
                 //Game over ou perder vida
                 GameManager.instance.TryAgain();
+            }
+            else if (other.CompareTag("Hole"))
+            {
+                Debug.Log("holetag");
+                holePlayer = true;
+                //hole.PlayerFall();
+            }
+            else if (other.CompareTag("Tile"))
+            {
+                Debug.Log("tiletag");
+                holePlayer = false;
             }
         }
 

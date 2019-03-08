@@ -10,6 +10,7 @@ TagManager:
   - Tile
   - NPC
   - FinalCoin
+  - Hole
   layers:
   - Default
   - TransparentFX
