@@ -18,6 +18,6 @@ public class RestartLevel : MonoBehaviour
     public void ResetandQuit()
     {
         PlayerPrefs.SetInt("CurrentLevel", 1);
-        Application.Quit();
+        SceneManager.LoadScene("MainMenu");
     }
 }

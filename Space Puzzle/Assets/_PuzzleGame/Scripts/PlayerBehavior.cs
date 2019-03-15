@@ -17,8 +17,6 @@ public class PlayerBehavior : MonoBehaviour
     int coins = 0;
     public ProgressBar Pb;
     public float fallSpeed = 8.0f;
-    public bool holePlayer = false;
-    public HoleQuad hole;
     bool isRuning = true;
 
 
