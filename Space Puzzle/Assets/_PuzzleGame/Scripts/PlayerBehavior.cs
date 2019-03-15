@@ -35,14 +35,7 @@ public class PlayerBehavior : MonoBehaviour
         progress = 100 / totalCoins;
 
     }
-    void Update()
-    {
-        if (GameObject.FindWithTag("Coin") == null)
-        {
-            finalCoin.SetActive(true);
-        }
 
-    }
 
     void CheckCoins()
     {
@@ -78,10 +71,10 @@ public class PlayerBehavior : MonoBehaviour
             if (other.CompareTag("Coin"))
             {
                 coins++;
-                CheckCoins();
                 //Destroy coin
                 coinSound.Play();
                 Destroy(other.gameObject);
+                CheckCoins();
                 Pb.BarValue = Pb.BarValue + progress;
             }
 
@@ -95,17 +88,6 @@ public class PlayerBehavior : MonoBehaviour
 
                 //Game over ou perder vida
                 GameManager.instance.TryAgain();
-            }
-            else if (other.CompareTag("Hole"))
-            {
-                Debug.Log("holetag");
-                holePlayer = true;
-                //hole.PlayerFall();
-            }
-            else if (other.CompareTag("Tile"))
-            {
-                Debug.Log("tiletag");
-                holePlayer = false;
             }
         }
 

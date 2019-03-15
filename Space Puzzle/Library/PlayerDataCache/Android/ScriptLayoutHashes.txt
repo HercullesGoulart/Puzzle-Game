@@ -33,6 +33,36 @@ Assets/_PuzzleGame/Scenes/27.unity
 Assets/_PuzzleGame/Scenes/28.unity
 Assets/_PuzzleGame/Scenes/29.unity
 Assets/_PuzzleGame/Scenes/30.unity
+Assets/_PuzzleGame/Scenes/31.unity
+Assets/_PuzzleGame/Scenes/32.unity
+Assets/_PuzzleGame/Scenes/33.unity
+Assets/_PuzzleGame/Scenes/34.unity
+Assets/_PuzzleGame/Scenes/35.unity
+Assets/_PuzzleGame/Scenes/36.unity
+Assets/_PuzzleGame/Scenes/37.unity
+Assets/_PuzzleGame/Scenes/38.unity
+Assets/_PuzzleGame/Scenes/39.unity
+Assets/_PuzzleGame/Scenes/40.unity
+Assets/_PuzzleGame/Scenes/41.unity
+Assets/_PuzzleGame/Scenes/42.unity
+Assets/_PuzzleGame/Scenes/43.unity
+Assets/_PuzzleGame/Scenes/44.unity
+Assets/_PuzzleGame/Scenes/45.unity
+Assets/_PuzzleGame/Scenes/46.unity
+Assets/_PuzzleGame/Scenes/47.unity
+Assets/_PuzzleGame/Scenes/48.unity
+Assets/_PuzzleGame/Scenes/49.unity
+Assets/_PuzzleGame/Scenes/50.unity
+Assets/_PuzzleGame/Scenes/51.unity
+Assets/_PuzzleGame/Scenes/52.unity
+Assets/_PuzzleGame/Scenes/53.unity
+Assets/_PuzzleGame/Scenes/54.unity
+Assets/_PuzzleGame/Scenes/55.unity
+Assets/_PuzzleGame/Scenes/56.unity
+Assets/_PuzzleGame/Scenes/57.unity
+Assets/_PuzzleGame/Scenes/58.unity
+Assets/_PuzzleGame/Scenes/59.unity
+Assets/_PuzzleGame/Scenes/60.unity
 Assets/_PuzzleGame/Scenes/GameOver.unity
 SceneListEnd?
 711c2fe50e74bc279b4127e1f5b06713 Assembly-CSharp.dll:.Paths
@@ -168,8 +198,10 @@ d251bf88db6c95a6b1aa0b69298da9ef UnityEngine.SpatialTracking.dll:UnityEngine.Spa
 babcddaca0e075af60191ddd2b395059 Assembly-CSharp.dll:.ProgressBar
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
+a5f9960f8a2fb8e7365ba64fd3d813b8 Assembly-CSharp.dll:.HoleQuad
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 e17c8be3940ae74e1fd73f05b1177d5d Assembly-CSharp.dll:.PlayerMove
+9cf6ab2a9a67af1d8e485d128af824f2 Assembly-CSharp.dll:.MainMenuPlayerAnimation
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f8b139fcde9fda6214245df246415cc7 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorStageBehaviour
@@ -274,7 +306,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 49965adb0785315c76029a0b60745870 Assembly-CSharp.dll:Lean.Touch.LeanCameraMove
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
-74c4908deca2db5b835bdf0f2107d4f9 Assembly-CSharp.dll:.PlayerBehavior
+720e04561ae50a0916c187227a2e4b51 Assembly-CSharp.dll:.PlayerBehavior
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
@@ -319,6 +351,7 @@ d85337dbc4a074cb8f2a94792eacdd21 Assembly-CSharp.dll:.HomeUIManager
 8e5e00ca42eeebc1eae2f91fabb1ee02 Assembly-CSharp.dll:PolygonArsenal.PolygonButtonScript
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.DragTarget
 37eedbe172a703ac5f0797076add2b78 Assembly-CSharp.dll:Lean.Touch.LeanFingerUp
+b28cde3bc285fec6800feb34f3498ba1 Assembly-CSharp.dll:.tileback
 c6666661329916e218bee7f5e79e60f5 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 3165968ba45c74472d279ba04455fccb Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 c8cdc18ba70b4c0a4e0876c08d6d2a69 Assembly-CSharp.dll:Lean.Touch.LeanSpawnAt
@@ -360,6 +393,7 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 d290aa5e69b93e2bde3fddd91d219f4f Assembly-CSharp.dll:Lean.Touch.LeanFingerHeld
 330f62fcfa21b2047340eab154927cfc Assembly-CSharp.dll:Lean.Touch.LeanSelectableRendererColor
 06881aaaf4bebde012578e3436eedd0a Assembly-CSharp.dll:.PositioningLeanTouch
+04c218ad738ab34364ab8b0401675b8e Assembly-CSharp.dll:.DownTile
 46280057aba92e5945195d40246a7bdf Assembly-CSharp.dll:PolygonArsenal.PolygonSceneSelect
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f8b139fcde9fda6214245df246415cc7 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -397,4 +431,3 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 258358db7e86d293eecc47ec1b46743e Assembly-CSharp.dll:.CustomPluginExampleBrain
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Enemy
-a1f0a259c1b8745be19ca7bec78fcaf1 Assembly-CSharp.dll:.MainMenuPlayerAnimation

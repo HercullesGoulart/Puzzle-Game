@@ -8,7 +8,6 @@ public class HoleQuad : MonoBehaviour
     public float fallSpeed = 8.0f;
     public bool isfalling = false;
     public RestartLevel restart;
-    PlayerBehavior behaviorplayer;
     Vector3 initialPos;
 
     void Update()
@@ -25,7 +24,7 @@ public class HoleQuad : MonoBehaviour
 
     public void PlayerFall()
     {
-        StartCoroutine(RestartLevel());
+        //StartCoroutine(RestartLevel());
 
     }
 
@@ -36,24 +35,25 @@ public class HoleQuad : MonoBehaviour
         Debug.Log("hole");
         transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
         transform.position = initialPos;
-        StartCoroutine(RestartLevel());
-        //yield return new WaitForSeconds(0.1f);
-        //transform.position = initialPos;
-
     }
-    IEnumerator RestartLevel()
+    //    StartCoroutine(RestartLevel());
+    //    //yield return new WaitForSeconds(0.1f);
+    //    //transform.position = initialPos;
 
-    {
-        if (behaviorplayer.holePlayer == true)
-        {
-            yield return new WaitForSeconds(0.5f);
-            Debug.Log("holeplayer");
-            player.transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
-            yield return new WaitForSeconds(0.2f);
-            restart.TryAgain();
+//}
+//IEnumerator RestartLevel()
 
-        }
+//{
+//    if (behaviorplayer.holePlayer == true)
+//    {
+//        yield return new WaitForSeconds(0.5f);
+//        Debug.Log("holeplayer");
+//        player.transform.Translate(Vector3.down * fallSpeed * Time.deltaTime, Space.World);
+//        yield return new WaitForSeconds(0.2f);
+//        restart.TryAgain();
 
-    }
+//    }
 
 }
+
+

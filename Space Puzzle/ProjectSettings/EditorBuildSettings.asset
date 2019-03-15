@@ -99,6 +99,96 @@ EditorBuildSettings:
     path: Assets/_PuzzleGame/Scenes/30.unity
     guid: 9db71a12e7045554189c7ce8efe4bec6
   - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/31.unity
+    guid: 86f54d4906b37bb4eb289b026dcf2634
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/32.unity
+    guid: 4de0a00158ad9fb4cb3a27a267bf459b
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/33.unity
+    guid: e8fe6eed99df9dc4eab6de2756549b63
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/34.unity
+    guid: b3af15320048bc2478f3fe58e8a14b47
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/35.unity
+    guid: 62a6a528cfb11424684b38945be28452
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/36.unity
+    guid: ab6dbb5e02c956f4684d3233f7caf3a6
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/37.unity
+    guid: 6c518a47575a9194b9c01da249ad1951
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/38.unity
+    guid: e451a84dcb9addb46a95d5ece79dfe13
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/39.unity
+    guid: 98a623df6c8f0a94299077c008271513
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/40.unity
+    guid: d09ff3befc36e8b498c4eab4652aa595
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/41.unity
+    guid: fb9993858f073cc4da925233890ce1f7
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/42.unity
+    guid: 82d5f9f2fbae6a645955e54f7bff45d3
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/43.unity
+    guid: 807837c7d0f2c284aa69c983021fda80
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/44.unity
+    guid: f913f541ab76ff54dba7a19cf2453f28
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/45.unity
+    guid: acd5fc69b291ac94aa9333d02155aa64
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/46.unity
+    guid: 9399518ed85ee5b47b64dd16e46920af
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/47.unity
+    guid: 74f8115650f8a2c408cf8fc4806391a0
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/48.unity
+    guid: 255e287b3f0f5b34d8f4b3dd6e9dacd7
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/49.unity
+    guid: 1b1e4f8d1f7265040b0d402b2fdba9de
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/50.unity
+    guid: c6279126a6710be45b5b811b2bf89d32
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/51.unity
+    guid: e27f7706c920b964085c56b9f6468e2e
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/52.unity
+    guid: 8bd203e00b7b83b47ba7ff882eb89cbc
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/53.unity
+    guid: dd616d703ce68a947b116a1d07f0111c
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/54.unity
+    guid: a21cb21a8b3f27249a8dd762d6fa3535
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/55.unity
+    guid: b87fe15b37a46b041bd322c3aba9f9a3
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/56.unity
+    guid: 0d2cd0618acd81d4dbb9f961e6a9395b
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/57.unity
+    guid: 511874ae3cdc74e46a01bbc59c5bc689
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/58.unity
+    guid: cd81bfd0c950f08428fbf176171cc15b
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/59.unity
+    guid: 07660d783c9d9ed41a186fa3869d28a5
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/60.unity
+    guid: 39cd4e844848cdb4ea40a65b801a846d
+  - enabled: 1
     path: Assets/_PuzzleGame/Scenes/GameOver.unity
     guid: 936a6091a88e0ee4ab8baea339c21f82
   m_configObjects: {}

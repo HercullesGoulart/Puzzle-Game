@@ -253,7 +253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153740644070002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.8, z: 2}
+  m_LocalPosition: {x: 3, y: 0.19929056, z: 2}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children:
   - {fileID: 4223130317958044}
@@ -314,6 +314,9 @@ MonoBehaviour:
   finalCoin: {fileID: 0}
   progress: 25
   Pb: {fileID: 0}
+  fallSpeed: 8
+  holePlayer: 0
+  hole: {fileID: 0}
 --- !u!114 &114509482220964932
 MonoBehaviour:
   m_ObjectHideFlags: 0

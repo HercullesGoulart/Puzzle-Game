@@ -6,8 +6,6 @@ public class Splash : MonoBehaviour
 {
 
     public GameObject player;
-
-
     int secSplash= 6;
     int numeroSplash = 30;
     public GameObject splash_prefab;
@@ -21,10 +19,7 @@ public class Splash : MonoBehaviour
             GameObject objSplash = (GameObject)Instantiate(splash_prefab);
             objSplash.SetActive(false);
             SplashList.Add(objSplash);
-
-
         }
-
     }
 
     public void InstantiateSplash()
@@ -36,6 +31,7 @@ public class Splash : MonoBehaviour
                 SplashPosition();
                 ResetObj(SplashList[i]);
                 SplashList[i].gameObject.SetActive(true);
+                //SplashList[i].gameObject.transform.SetParent(GameObject.Find("Tile").transform);
                 StartCoroutine(waitSeconds(SplashList[i]));
                 break;
             }
@@ -57,11 +53,7 @@ public class Splash : MonoBehaviour
 
     private void ResetObj(GameObject ResetarObj)
     {
-        //Reseta posicao e rotacao do objeto
         ResetarObj.transform.position = transform.position;
         ResetarObj.transform.rotation = transform.rotation;
     }
-
-
-
 }
