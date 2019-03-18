@@ -2452,6 +2452,11 @@ PrefabInstance:
       propertyPath: Pb
       value: 
       objectReference: {fileID: 1493233939}
+    - target: {fileID: 114308320655564068, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: jumpVelocity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 135586609121367090, guid: 46a64bc75a2f57d40b6379f306423ee2,
         type: 3}
       propertyPath: m_IsTrigger
@@ -2526,6 +2531,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3999948765473669721, guid: 1663be36fca7d0c47a0f43b884996e01,
+        type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3999948765473669724, guid: 1663be36fca7d0c47a0f43b884996e01,
         type: 3}
       propertyPath: restart
@@ -2536,11 +2546,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 662490778}
-    - target: {fileID: 3999948765473669721, guid: 1663be36fca7d0c47a0f43b884996e01,
-        type: 3}
-      propertyPath: m_DynamicOccludee
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1663be36fca7d0c47a0f43b884996e01, type: 3}
 --- !u!4 &1387642439 stripped

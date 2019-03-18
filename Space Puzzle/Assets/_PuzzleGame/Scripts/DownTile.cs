@@ -18,7 +18,6 @@ public class DownTile : MonoBehaviour
         if (col.transform.CompareTag("Player"))
         {
             _anim.enabled = true;
-            StartCoroutine(DesactivateCol()); 
 
         }
 
@@ -42,9 +41,8 @@ public class DownTile : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         restart.TryAgain();
     }
-    IEnumerator DesactivateCol()
+    public void DesactivateCol()
     {
-        yield return new WaitForSeconds(1.05f);
         Collider.enabled = false;
     }
 

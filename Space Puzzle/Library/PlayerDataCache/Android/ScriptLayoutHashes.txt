@@ -83,7 +83,7 @@ e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.G
 e1bbf0ab858085e38fae6b12ebbdcd35 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 201e3fde670b00545944bb3db215c80a UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 b3498f5f8befd101c40cc98fbc1836c2 Assembly-CSharp.dll:.HudManager
-e17c8be3940ae74e1fd73f05b1177d5d Assembly-CSharp.dll:.NPCMove
+5fa69bd14aaee36878d094ded3e969da Assembly-CSharp.dll:.NPCMove
 260e4bb764416881ae8a1c866e861e92 Assembly-CSharp.dll:Lean.Touch.LeanFingerDown
 e7a73f5f78ba6445195ec23b74a1ce2d Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
 b3fcf71fe61adad53a45d141286c0999 Assembly-CSharp.dll:Lean.Touch.LeanFingerLine
@@ -199,7 +199,7 @@ babcddaca0e075af60191ddd2b395059 Assembly-CSharp.dll:.ProgressBar
 303ad70ce203ad874efe2965d0fbcff9 Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsEventTracker
 7fb9de8dcf73854b6b328eca1f7a6e6d Unity.Analytics.Tracker.dll:UnityEngine.Analytics.AnalyticsTracker
 94017dcc9f00fe671ea7dc427b4da011 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
-e17c8be3940ae74e1fd73f05b1177d5d Assembly-CSharp.dll:.PlayerMove
+5fa69bd14aaee36878d094ded3e969da Assembly-CSharp.dll:.PlayerMove
 9cf6ab2a9a67af1d8e485d128af824f2 Assembly-CSharp.dll:.MainMenuPlayerAnimation
 0077fc8e4fbae67f80e80ebd534de5a0 Vuforia.UnityExtensions.dll:Vuforia.AnchorBehaviour
 f8b139fcde9fda6214245df246415cc7 Vuforia.UnityExtensions.dll:Vuforia.AnchorInputListenerBehaviour
@@ -325,8 +325,9 @@ db1d6c0ee127151c4718ec0e20a6f1e9 Assembly-CSharp.dll:Lean.Touch.LeanSelectable
 fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-e17c8be3940ae74e1fd73f05b1177d5d Assembly-CSharp.dll:.TacticsMove
+5fa69bd14aaee36878d094ded3e969da Assembly-CSharp.dll:.TacticsMove
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TurnManager
+04c218ad738ab34364ab8b0401675b8e Assembly-CSharp.dll:.DownTile
 0e78074dc9982c5b5d2c5e112a658d35 Assembly-CSharp.dll:Lean.Touch.LeanScale
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
@@ -428,4 +429,3 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 258358db7e86d293eecc47ec1b46743e Assembly-CSharp.dll:.CustomPluginExampleBrain
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Enemy
-04c218ad738ab34364ab8b0401675b8e Assembly-CSharp.dll:.DownTile
