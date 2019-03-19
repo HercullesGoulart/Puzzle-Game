@@ -305,7 +305,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 5887ef1bc706b22b773d253fd443ceef UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 49965adb0785315c76029a0b60745870 Assembly-CSharp.dll:Lean.Touch.LeanCameraMove
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
-c510ede4207da03d3eca788652f13e81 Assembly-CSharp.dll:.PlayerBehavior
+5bda874e21b8ed70aef386a4b53e2d5c Assembly-CSharp.dll:.PlayerBehavior
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
@@ -327,7 +327,7 @@ fb6a1ea36b4f6ef5948d283d93760765 UnityEngine.GoogleAudioSpatializer.dll:UnityEng
 5b0391b7e3d9ea9db6c0a8fbd0ca23f6 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
 5fa69bd14aaee36878d094ded3e969da Assembly-CSharp.dll:.TacticsMove
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TurnManager
-04c218ad738ab34364ab8b0401675b8e Assembly-CSharp.dll:.DownTile
+8e9975e18c80611c2380afef0dc977ce Assembly-CSharp.dll:.DownTile
 0e78074dc9982c5b5d2c5e112a658d35 Assembly-CSharp.dll:Lean.Touch.LeanScale
 a4f0a4f62100f1a4fb5cbe0e00dde83f Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
 5fc094978ce3e3591a7500ed380d854a Unity.Analytics.DataPrivacy.dll:UnityEngine.Analytics.DataPrivacyButton
@@ -429,3 +429,4 @@ fbbf64dcbe0662e3eda1dec45ea8f895 Vuforia.UnityExtensions.dll:Vuforia.WireframeBe
 71bb6a6b6c8f052f948db64c7dd3ca4f Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 258358db7e86d293eecc47ec1b46743e Assembly-CSharp.dll:.CustomPluginExampleBrain
 afc5b93a7b192de2dcb3832fe35a5c7e Assembly-CSharp.dll:.Enemy
+7003ed1384789403674db8bbef8761f7 Assembly-CSharp.dll:.KillPlayer

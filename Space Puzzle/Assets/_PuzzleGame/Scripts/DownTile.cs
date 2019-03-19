@@ -8,6 +8,7 @@ public class DownTile : MonoBehaviour
     public Tile tile;
     public RestartLevel restart;
     Collider Collider;
+    public GameObject boxNew;
 
     private void Start()
     {
@@ -27,24 +28,32 @@ public class DownTile : MonoBehaviour
         if (this.tile.current == true)
         {
             Debug.Log("currentTileTest");
+            DesactivateCol();
             StartCoroutine(delayfall());
         }
+        tile.selectable = false;
     }
 
     public void DesactivateAnim()
     {
         _anim.enabled = false;
         Collider.enabled = true;
+        tile.selectable = true;
+        boxNew.SetActive(false);
     }
     IEnumerator delayfall()
     {
         yield return new WaitForSeconds(0.2f);
         restart.TryAgain();
     }
-    public void DesactivateCol()
+    void DesactivateCol()
     {
         Collider.enabled = false;
+        boxNew.SetActive(true);
     }
+
+    
+
 
 
 

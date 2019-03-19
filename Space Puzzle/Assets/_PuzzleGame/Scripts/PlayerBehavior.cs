@@ -18,6 +18,8 @@ public class PlayerBehavior : MonoBehaviour
     public ProgressBar Pb;
     public float fallSpeed = 8.0f;
     bool isRuning = true;
+    public GameObject player;
+    public RestartLevel restart;
 
 
 
@@ -32,9 +34,38 @@ public class PlayerBehavior : MonoBehaviour
 
         progress = 100 / totalCoins;
 
+
+
     }
+    void Update()
+    {
+        if (player.transform.position.x < 0)
+        {
+            KillPlayer();
+        }
+        else if (player.transform.position.x > 4)
+        {
+            KillPlayer();
+        }
+        else if (player.transform.position.y < 0)
+        {
+            KillPlayer();
+        }
+        else if (player.transform.position.z > 4)
+        {
+            KillPlayer();
+        }
+        else if (player.transform.position.z < 0)
+        {
+            KillPlayer();
+        }
 
-
+    }
+    void KillPlayer()
+    {
+        restart.TryAgain();
+        Debug.Log("KillPlayerWorking");
+    }
     void CheckCoins()
     {
         if (coins == numberOfCoins)
