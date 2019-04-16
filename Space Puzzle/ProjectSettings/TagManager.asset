@@ -11,6 +11,7 @@ TagManager:
   - NPC
   - FinalCoin
   - Hole
+  - BonusCoin
   layers:
   - Default
   - TransparentFX

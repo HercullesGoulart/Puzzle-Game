@@ -45,7 +45,22 @@ public class GameManager : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
-    //send the player to the next level
+    public void BonusLevel()
+    {
+        if (PlayerPrefs.GetInt("Bonus".ToString()) == 0)
+        {
+            int bonusLevel = PlayerPrefs.GetInt("Bonus");
+            bonusLevel++;
+
+            PlayerPrefs.SetInt("Bonus", bonusLevel);
+            SceneManager.LoadScene(bonusLevel);
+        }
+        else
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt("Bonus"));
+        }
+
+    }
     public void StartLevel()
     {
         if (PlayerPrefs.GetInt("CurrentLevel".ToString()) == 0)

@@ -1762,7 +1762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1923795881018492, guid: 610bf2eea2559174099f8cbba78c5550, type: 3}
       propertyPath: m_TagString
-      value: FinalCoin
+      value: BonusCoin
+      objectReference: {fileID: 0}
+    - target: {fileID: 1923795881018492, guid: 610bf2eea2559174099f8cbba78c5550, type: 3}
+      propertyPath: m_Name
+      value: BonusCoin
       objectReference: {fileID: 0}
     - target: {fileID: 4481044192719908, guid: 610bf2eea2559174099f8cbba78c5550, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2975,25 +2979,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1173680913, guid: ff838754c83390346aa92d63bb021c05, type: 3}
       propertyPath: m_Color.r
-      value: 0.90196085
+      value: 0.066037714
       objectReference: {fileID: 0}
     - target: {fileID: 1173680913, guid: ff838754c83390346aa92d63bb021c05, type: 3}
       propertyPath: m_Color.g
-      value: 0.36078432
+      value: 0.066037714
       objectReference: {fileID: 0}
     - target: {fileID: 1173680913, guid: ff838754c83390346aa92d63bb021c05, type: 3}
       propertyPath: m_Color.b
-      value: 0.882353
+      value: 0.066037714
       objectReference: {fileID: 0}
     - target: {fileID: 108395414187057104, guid: ff838754c83390346aa92d63bb021c05,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.4009434
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 108395414187057104, guid: ff838754c83390346aa92d63bb021c05,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9763086
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 108395414187057104, guid: ff838754c83390346aa92d63bb021c05,
         type: 3}
@@ -3004,6 +3008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CullingMask.m_Bits
       value: 1815
+      objectReference: {fileID: 0}
+    - target: {fileID: 108395414187057104, guid: ff838754c83390346aa92d63bb021c05,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff838754c83390346aa92d63bb021c05, type: 3}
@@ -3254,6 +3263,15 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IncreaseLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473458172315446, guid: 99f4fc269c1896f43be968f0fdeef1f0,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Bonus Unlocked!
+
+        Congratulations!
+
+        >>>'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 3}

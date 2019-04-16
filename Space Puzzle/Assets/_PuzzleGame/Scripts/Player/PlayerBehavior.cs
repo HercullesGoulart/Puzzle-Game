@@ -84,6 +84,20 @@ public class PlayerBehavior : MonoBehaviour
         if (isRuning == true)
         {
 
+            if (other.CompareTag("BonusCoin"))
+            {
+
+                //Destroy coin
+                coinSound.Play();
+                Pb.BarValue = Pb.BarValue + progress;
+                isRuning = false;
+                Destroy(other.gameObject);
+                //level complete
+                player.transform.position = new Vector3(5, 0, 1);
+                congratulations.SetActive(true);
+                StartCoroutine(EndAnimation());
+                StartCoroutine(EndScene());
+            }
             if (other.CompareTag("FinalCoin"))
             {
 
