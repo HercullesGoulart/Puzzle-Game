@@ -12,6 +12,11 @@ public class RestartLevel : MonoBehaviour
     }
     public void QuitGame()
     {
+        SceneManager.LoadScene("MainMenu");
+
+    }
+    public void ExitGame()
+    {
         Application.Quit();
 
     }

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using GameAnalyticsSDK;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -68,7 +70,10 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         SceneManager.LoadScene(currentLevel);
 
-        //trying to activate player turn
+
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "World_01", "Stage_01", "Level_Progress");
+
+
     }
     public void QuitGame()
     {

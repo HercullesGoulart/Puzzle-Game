@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using GameAnalyticsSDK;
 
 public class PlayerBehavior : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class PlayerBehavior : MonoBehaviour
     bool isRuning = true;
     public GameObject player;
     public RestartLevel restart;
+    
+
+    
 
 
 
@@ -34,7 +38,7 @@ public class PlayerBehavior : MonoBehaviour
 
         progress = 100 / totalCoins;
 
-
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "World_01", "Stage_01", "Level_Progress");
 
     }
     void Update()
@@ -43,7 +47,7 @@ public class PlayerBehavior : MonoBehaviour
         {
             KillPlayer();
         }
-        else if (player.transform.position.x > 4)
+        else if (player.transform.position.x > 6)
         {
             KillPlayer();
         }
@@ -92,10 +96,10 @@ public class PlayerBehavior : MonoBehaviour
                 isRuning = false;
                 Destroy(other.gameObject);
                 //level complete
+                player.transform.position = new Vector3(5, 0, 1);
                 congratulations.SetActive(true);
                 StartCoroutine(EndAnimation());
                 StartCoroutine(EndScene());
-
             }
             if (other.CompareTag("Coin"))
             {
@@ -126,7 +130,7 @@ public class PlayerBehavior : MonoBehaviour
     {
 
         yield return new WaitForSeconds(2f);
-
+        
         ChangeLevel();
 
         //LevelCleared();
@@ -144,6 +148,7 @@ public class PlayerBehavior : MonoBehaviour
     void ChangeLevel()
     {
         GameManager.instance.IncreaseLevel();
+        
     }
 
 }
