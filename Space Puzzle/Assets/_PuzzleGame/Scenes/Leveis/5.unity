@@ -1056,6 +1056,12 @@ Transform:
   m_Father: {fileID: 1457310553}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &741540221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129803564, guid: 46a64bc75a2f57d40b6379f306423ee2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2031930383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &783980471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4399563524724284, guid: 74b78bb172794d046955284edcd4e88e,
@@ -1822,7 +1828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d7d89129ca4284fafe9f18c64377db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reward: {fileID: 8433544248813611481, guid: ebde08e5519b0ca4d8c8d3b46fe3a365, type: 3}
 --- !u!1 &1160646557
 GameObject:
   m_ObjectHideFlags: 0
@@ -3636,6 +3641,21 @@ PrefabInstance:
       propertyPath: transitionAnim
       value: 
       objectReference: {fileID: 1224970303}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: playerMesh
+      value: 
+      objectReference: {fileID: 741540221}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: newPlayerMesh
+      value: 
+      objectReference: {fileID: 2100000, guid: 12672292509b38a4abc40d807caee7c1, type: 2}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: playerRenderer
+      value: 
+      objectReference: {fileID: 741540221}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46a64bc75a2f57d40b6379f306423ee2, type: 3}
 --- !u!114 &2031930384 stripped

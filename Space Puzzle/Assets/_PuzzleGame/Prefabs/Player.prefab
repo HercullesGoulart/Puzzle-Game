@@ -316,7 +316,10 @@ MonoBehaviour:
   fallSpeed: 8
   player: {fileID: 1153740644070002}
   restart: {fileID: 114509482220964932}
-  pause: {fileID: 0}
+  newPlayerMesh:
+  - {fileID: 2100000, guid: 7657a9eeec50070499647ad631d823b7, type: 2}
+  - {fileID: 2100000, guid: 12672292509b38a4abc40d807caee7c1, type: 2}
+  - {fileID: 2100000, guid: f293af872f0c87e4cbda5e7e844d3386, type: 2}
 --- !u!114 &114509482220964932
 MonoBehaviour:
   m_ObjectHideFlags: 0

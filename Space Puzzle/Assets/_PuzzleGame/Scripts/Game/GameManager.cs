@@ -17,9 +17,14 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public static Tile instanceTile;
+    public bool onFire = false;
+
 
     void Awake()
     {
+
+        GameAnalytics.Initialize();
+
         //check that it exists
         if (instance == null)
         {
@@ -86,9 +91,20 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentLevel);
 
 
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, SceneManager.GetActiveScene().buildIndex.ToString());
+
+
+
+    }
+    public void IncreaseLevelAfterBonus()
+    {
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        SceneManager.LoadScene(currentLevel);
+
+
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "World_01", "Stage_01", "Level_Progress");
-
-
     }
     public void QuitGame()
     {

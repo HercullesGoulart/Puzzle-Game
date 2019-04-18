@@ -26,6 +26,8 @@ public class DailyReward : MonoBehaviour
 
 
 
+
+
     //startup
     void Start()
     {
@@ -36,9 +38,7 @@ public class DailyReward : MonoBehaviour
         //}
         //else
         //{
-            disableButton();
-            StartCoroutine("CheckTime");
-        
+        StartCoroutine("CheckTime");
 
 
     }
@@ -122,7 +122,7 @@ public class DailyReward : MonoBehaviour
     public void enableButton()
     {
         timerButton.interactable = true;
-        timeLabel.text = "CLAIM REWARD";
+        timeLabel.text = "Play Bonus Level";
     }
 
 
@@ -131,15 +131,15 @@ public class DailyReward : MonoBehaviour
     private void disableButton()
     {
         timerButton.interactable = false;
-        timeLabel.text = "NOT READY";
+        timeLabel.text = "Bonus Level";
     }
 
 
     //use to check the current time before completely any task. use this to validate
-    private IEnumerator CheckTime()
+    public IEnumerator CheckTime()
     {
         disableButton();
-        timeLabel.text = "Checking the time";
+        timeLabel.text = "Bonus Level";
         Debug.Log("==> Checking for new time");
         yield return StartCoroutine(
             TimeManager.sharedInstance.getTime()

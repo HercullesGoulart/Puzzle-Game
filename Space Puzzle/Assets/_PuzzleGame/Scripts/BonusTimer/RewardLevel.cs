@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class RewardLevel : MonoBehaviour
 {
-    public DailyReward reward;
+    DailyReward reward;
+
+    private void Start()
+    {
+        reward = GetComponent<DailyReward>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        BonusEnabled();
+        if (other.CompareTag("Player"))
+        {
+
+            BonusEnabled();
+        }
+        
     }
 
     void BonusEnabled()
     {
-        reward.enableButton();
+        reward.rewardClicked();
         Debug.Log("bonus enabled");
+        reward.StartCoroutine("CheckTime");
     }
 }

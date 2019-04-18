@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using GameAnalyticsSDK;
 
+
 public class PlayerBehavior : MonoBehaviour
 {
 
@@ -21,10 +22,9 @@ public class PlayerBehavior : MonoBehaviour
     bool isRuning = true;
     public GameObject player;
     public RestartLevel restart;
-    
+    Renderer playerRenderer;
 
-    
-
+    public Material[] newPlayerMesh;
 
 
     void Start()
@@ -38,7 +38,27 @@ public class PlayerBehavior : MonoBehaviour
 
         progress = 100 / totalCoins;
 
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "World_01", "Stage_01", "Level_Progress");
+
+        playerRenderer = GetComponentInChildren<Renderer>();
+        //playerRenderer.enabled = true;
+        //
+        if (GameManager.instance.onFire == true)
+        {
+            
+            playerRenderer.sharedMaterial = newPlayerMesh[1];
+            PlayerPrefs.SetString("CurrentColor", playerRenderer.sharedMaterial.ToString());
+        }
+        else
+        {
+            string currentColor = PlayerPrefs.GetString("CurrentColor");
+
+            //playerRenderer.sharedMaterial.ToString() = currentColor;
+        }
+
+
+
+
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, SceneManager.GetActiveScene().buildIndex.ToString());
 
     }
     void Update()
@@ -68,7 +88,6 @@ public class PlayerBehavior : MonoBehaviour
     void KillPlayer()
     {
         restart.TryAgain();
-        Debug.Log("KillPlayerWorking");
     }
     void CheckCoins()
     {
@@ -96,7 +115,10 @@ public class PlayerBehavior : MonoBehaviour
                 player.transform.position = new Vector3(5, 0, 1);
                 congratulations.SetActive(true);
                 StartCoroutine(EndAnimation());
-                StartCoroutine(EndScene());
+                StartCoroutine(EndSceneBonus());
+                GameManager.instance.onFire = true;
+
+
             }
             if (other.CompareTag("FinalCoin"))
             {
@@ -114,6 +136,7 @@ public class PlayerBehavior : MonoBehaviour
                 congratulations.SetActive(true);
                 StartCoroutine(EndAnimation());
                 StartCoroutine(EndScene());
+
             }
             if (other.CompareTag("Coin"))
             {
@@ -127,16 +150,37 @@ public class PlayerBehavior : MonoBehaviour
 
             else if (other.CompareTag("NPC"))
             {
+                if (SceneManager.GetActiveScene().name == "Bonus")
+                {
+                    GameManager.instance.IncreaseLevelAfterBonus();
+                }
+                else
+                {
+                    GameManager.instance.TryAgain();
+                }
 
-                GameManager.instance.TryAgain();
+
             }
             else if (other.CompareTag("Spikes"))
             {
-
-                //Game over ou perder vida
-                GameManager.instance.TryAgain();
+                if (SceneManager.GetActiveScene().name == "Bonus")
+                {
+                    GameManager.instance.IncreaseLevelAfterBonus();
+                }
+                else
+                {
+                    GameManager.instance.TryAgain();
+                }
             }
         }
+
+    }
+    IEnumerator EndSceneBonus()
+    {
+
+        yield return new WaitForSeconds(2f);
+
+        GameManager.instance.IncreaseLevelAfterBonus();
 
     }
 
@@ -144,7 +188,7 @@ public class PlayerBehavior : MonoBehaviour
     {
 
         yield return new WaitForSeconds(2f);
-        
+
         ChangeLevel();
 
         //LevelCleared();
@@ -162,7 +206,7 @@ public class PlayerBehavior : MonoBehaviour
     void ChangeLevel()
     {
         GameManager.instance.IncreaseLevel();
-        
+
     }
 
 }
