@@ -40,7 +40,7 @@ public class PlayerAnimation : MonoBehaviour
     public void SoundandSplash()
     {
         playerSound.Play();
-        splashCall.InstantiateSplash();
+        //splashCall.InstantiateSplash();
     }
 
 }
