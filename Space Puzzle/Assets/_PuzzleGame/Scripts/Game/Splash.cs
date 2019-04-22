@@ -40,8 +40,8 @@ public class Splash : MonoBehaviour
     void SplashPosition()
     {
         transform.rotation = player.transform.rotation;
-        int rotation = Random.Range(0, 5) * 90;
-        transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation, transform.eulerAngles.z);
+        //int rotation = Random.Range(0, 5) * 90;
+        //transform.eulerAngles = new Vector3(transform.eulerAngles.x, rotation, transform.eulerAngles.z);
         transform.position = player.transform.position + new Vector3(0f,-0.25f,0f);
     }
 

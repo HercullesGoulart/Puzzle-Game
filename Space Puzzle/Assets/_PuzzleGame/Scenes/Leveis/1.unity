@@ -1562,6 +1562,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 129803564, guid: 46a64bc75a2f57d40b6379f306423ee2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: newPlayerMesh.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
         type: 3}
       propertyPath: congratulations
@@ -1587,9 +1596,24 @@ PrefabInstance:
       propertyPath: Pb
       value: 
       objectReference: {fileID: 2070738402}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: newPlayerMesh.Array.data[0]
+      value: 
+      objectReference: {fileID: 2031930387}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: newPlayerMesh.Array.data[1]
+      value: 
+      objectReference: {fileID: 2031930386}
     - target: {fileID: 135586609121367090, guid: 46a64bc75a2f57d40b6379f306423ee2,
         type: 3}
       propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804207926697444112, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1618,6 +1642,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50d6da6f29c198740a2791deeb6a1c28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2031930386 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6804207926697444112, guid: 46a64bc75a2f57d40b6379f306423ee2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2031930383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2031930387 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129803564, guid: 46a64bc75a2f57d40b6379f306423ee2,
+    type: 3}
+  m_PrefabInstance: {fileID: 2031930383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2070738401
 PrefabInstance:
   m_ObjectHideFlags: 0

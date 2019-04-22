@@ -31,15 +31,15 @@ public class DailyReward : MonoBehaviour
     //startup
     void Start()
     {
-        //if (PlayerPrefs.GetString("_timer") == "")
-        //{
-        //    Debug.Log("==> Enableing button");
-        //    enableButton();
-        //}
-        //else
-        //{
-        StartCoroutine("CheckTime");
-
+        if (PlayerPrefs.GetString("_timer") == "")
+        {
+            Debug.Log("==> Enableing button");
+            enableButton();
+        }
+        else
+        {
+            StartCoroutine("CheckTime");
+        }
 
     }
 

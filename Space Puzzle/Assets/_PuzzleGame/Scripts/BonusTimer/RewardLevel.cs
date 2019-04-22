@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RewardLevel : MonoBehaviour
 {
     DailyReward reward;
+    public PlayerBehavior player;
 
     private void Start()
     {
@@ -23,8 +25,14 @@ public class RewardLevel : MonoBehaviour
 
     void BonusEnabled()
     {
+        GameManager.instance.toBonus = true;
         reward.rewardClicked();
+        GameManager.instance.BonusLevel();
         Debug.Log("bonus enabled");
         reward.StartCoroutine("CheckTime");
+        
+
+
+
     }
 }

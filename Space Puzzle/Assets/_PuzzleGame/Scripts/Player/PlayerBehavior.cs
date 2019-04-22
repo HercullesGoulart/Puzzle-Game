@@ -24,7 +24,7 @@ public class PlayerBehavior : MonoBehaviour
     public RestartLevel restart;
     Renderer playerRenderer;
 
-    public Material[] newPlayerMesh;
+    public GameObject[] newPlayerMesh;
 
 
     void Start()
@@ -37,16 +37,18 @@ public class PlayerBehavior : MonoBehaviour
         int totalCoins = numberOfCoins + 1;
 
         progress = 100 / totalCoins;
-
+        GameManager.instance.toBonus = false;
 
         playerRenderer = GetComponentInChildren<Renderer>();
         //playerRenderer.enabled = true;
         //
         if (GameManager.instance.onFire == true)
         {
+
             
-            playerRenderer.sharedMaterial = newPlayerMesh[1];
-            PlayerPrefs.SetString("CurrentColor", playerRenderer.sharedMaterial.ToString());
+            newPlayerMesh[0].SetActive(false);
+            newPlayerMesh[1].SetActive(true);
+            PlayerPrefs.SetString("CurrentColor", newPlayerMesh[1].ToString());
         }
         else
         {
@@ -135,7 +137,16 @@ public class PlayerBehavior : MonoBehaviour
                 player.transform.position = new Vector3(5, 0, 1);
                 congratulations.SetActive(true);
                 StartCoroutine(EndAnimation());
-                StartCoroutine(EndScene());
+                
+
+                if (GameManager.instance.toBonus == true)
+                {
+                    StartCoroutine(ToBonus());
+                }
+                else
+                {
+                    StartCoroutine(EndScene());
+                }
 
             }
             if (other.CompareTag("Coin"))
@@ -190,6 +201,17 @@ public class PlayerBehavior : MonoBehaviour
         yield return new WaitForSeconds(2f);
 
         ChangeLevel();
+
+        //LevelCleared();
+
+    }
+    IEnumerator ToBonus()
+    {
+
+        yield return new WaitForSeconds(2f);
+
+        GameManager.instance.JustIncreaseLevel();
+        SceneManager.LoadScene("Bonus");
 
         //LevelCleared();
 

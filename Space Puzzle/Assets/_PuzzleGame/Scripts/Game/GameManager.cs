@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
 
     public static Tile instanceTile;
     public bool onFire = false;
-
+    public bool toBonus = false;
 
     void Awake()
     {
@@ -95,6 +95,14 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+    public void JustIncreaseLevel()
+    {
+        int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
+
+        currentLevel++;
+        PlayerPrefs.SetInt("CurrentLevel", currentLevel);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, SceneManager.GetActiveScene().buildIndex.ToString());
     }
     public void IncreaseLevelAfterBonus()
     {

@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/_PuzzleGame/Scenes/Menus/MainMenu.unity
     guid: bdbd50a7f3a95c5458f56fa665d7e8d2
   - enabled: 1
-    path: Assets/_PuzzleGame/Scenes/Bonus/Bonus.unity
-    guid: 22abb6330d009cc4ab93a207254f0c19
-  - enabled: 1
     path: Assets/_PuzzleGame/Scenes/Leveis/1.unity
     guid: 54f5201e3cffd824f9fcc23f2918cde8
   - enabled: 1
@@ -194,4 +191,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_PuzzleGame/Scenes/Menus/GameOver.unity
     guid: 936a6091a88e0ee4ab8baea339c21f82
+  - enabled: 1
+    path: Assets/_PuzzleGame/Scenes/Bonus/Bonus.unity
+    guid: 22abb6330d009cc4ab93a207254f0c19
   m_configObjects: {}
