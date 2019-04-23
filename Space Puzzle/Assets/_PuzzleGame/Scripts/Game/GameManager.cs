@@ -91,8 +91,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(currentLevel);
 
 
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, SceneManager.GetActiveScene().buildIndex.ToString());
-
+        //GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, SceneManager.GetActiveScene().buildIndex.ToString());
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "World_01", "Stage_01", "Level_Progress");
 
 
     }

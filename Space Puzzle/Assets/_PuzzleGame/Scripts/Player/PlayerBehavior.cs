@@ -60,8 +60,8 @@ public class PlayerBehavior : MonoBehaviour
 
 
 
-        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, SceneManager.GetActiveScene().buildIndex.ToString());
-
+        //GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, SceneManager.GetActiveScene().buildIndex.ToString());
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "World_01", "Stage_01", "Level_Progress"); // without score
     }
     void Update()
     {
