@@ -13,15 +13,18 @@ public class GameManager : MonoBehaviour
 
     Pause pause;
 
+
     //static instance of the GM can be acessed from anywhere
     public static GameManager instance;
 
     public static Tile instanceTile;
     public bool onFire = false;
-    public bool toBonus = false;
+    public GameObject bonusBox;
+    DailyReward reward;
 
     void Awake()
     {
+        reward = FindObjectOfType<DailyReward>();
 
         GameAnalytics.Initialize();
 
@@ -52,18 +55,8 @@ public class GameManager : MonoBehaviour
     }
     public void BonusLevel()
     {
-        if (PlayerPrefs.GetInt("Bonus".ToString()) == 0)
-        {
-            int bonusLevel = PlayerPrefs.GetInt("Bonus");
-            bonusLevel++;
 
-            PlayerPrefs.SetInt("Bonus", bonusLevel);
-            SceneManager.LoadScene(bonusLevel);
-        }
-        else
-        {
-            SceneManager.LoadScene(PlayerPrefs.GetInt("Bonus"));
-        }
+        SceneManager.LoadScene("Bonus");
 
     }
     public void StartLevel()
@@ -75,21 +68,26 @@ public class GameManager : MonoBehaviour
 
             PlayerPrefs.SetInt("CurrentLevel", currentLevel);
             SceneManager.LoadScene(currentLevel);
+
         }
         else
         {
             SceneManager.LoadScene(PlayerPrefs.GetInt("CurrentLevel"));
         }
-        
+
     }
     public void IncreaseLevel()
     {
+
         int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
         currentLevel++;
 
+        
+        
+
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         SceneManager.LoadScene(currentLevel);
-
+        
 
         //GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, SceneManager.GetActiveScene().buildIndex.ToString());
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "World_01", "Stage_01", "Level_Progress");

@@ -23,12 +23,14 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject player;
     public RestartLevel restart;
     Renderer playerRenderer;
-
+    public GameObject rewardPanel;
     public GameObject[] newPlayerMesh;
 
 
     void Start()
     {
+        
+
         Pb.BarValue = 0;
 
         GameObject[] coins = GameObject.FindGameObjectsWithTag("Coin");
@@ -37,7 +39,6 @@ public class PlayerBehavior : MonoBehaviour
         int totalCoins = numberOfCoins + 1;
 
         progress = 100 / totalCoins;
-        GameManager.instance.toBonus = false;
 
         playerRenderer = GetComponentInChildren<Renderer>();
         //playerRenderer.enabled = true;
@@ -45,7 +46,7 @@ public class PlayerBehavior : MonoBehaviour
         if (GameManager.instance.onFire == true)
         {
 
-            
+
             newPlayerMesh[0].SetActive(false);
             newPlayerMesh[1].SetActive(true);
             PlayerPrefs.SetString("CurrentColor", newPlayerMesh[1].ToString());
@@ -137,16 +138,9 @@ public class PlayerBehavior : MonoBehaviour
                 player.transform.position = new Vector3(5, 0, 1);
                 congratulations.SetActive(true);
                 StartCoroutine(EndAnimation());
-                
 
-                if (GameManager.instance.toBonus == true)
-                {
-                    StartCoroutine(ToBonus());
-                }
-                else
-                {
-                    StartCoroutine(EndScene());
-                }
+                StartCoroutine(EndScene());
+
 
             }
             if (other.CompareTag("Coin"))
@@ -228,6 +222,16 @@ public class PlayerBehavior : MonoBehaviour
     void ChangeLevel()
     {
         GameManager.instance.IncreaseLevel();
+
+        RewardPanel();
+        
+    }
+    public void RewardPanel()
+    {
+        if (PlayerPrefs.GetInt("CurrentLevel".ToString()) >= 5)
+        {
+            rewardPanel.SetActive(true);
+        }
 
     }
 

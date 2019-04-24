@@ -1289,6 +1289,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7f6382969c5024ca23b06863d5eca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onFire: 0
+  reward: {fileID: 8433544248813611481, guid: ebde08e5519b0ca4d8c8d3b46fe3a365, type: 3}
 --- !u!4 &1222586740
 Transform:
   m_ObjectHideFlags: 0

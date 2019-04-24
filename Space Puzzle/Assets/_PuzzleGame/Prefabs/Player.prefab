@@ -316,6 +316,8 @@ MonoBehaviour:
   fallSpeed: 8
   player: {fileID: 1153740644070002}
   restart: {fileID: 114509482220964932}
+  rewardPanel: {fileID: 8433544248813611483, guid: ebde08e5519b0ca4d8c8d3b46fe3a365,
+    type: 3}
   newPlayerMesh:
   - {fileID: 129803564}
   - {fileID: 6804207926697444112}

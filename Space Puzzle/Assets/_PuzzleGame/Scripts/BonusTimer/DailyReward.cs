@@ -122,7 +122,7 @@ public class DailyReward : MonoBehaviour
     public void enableButton()
     {
         timerButton.interactable = true;
-        timeLabel.text = "Play Bonus Level";
+        //timeLabel.text = "Play Bonus Level";
     }
 
 
@@ -131,7 +131,7 @@ public class DailyReward : MonoBehaviour
     private void disableButton()
     {
         timerButton.interactable = false;
-        timeLabel.text = "Bonus Level";
+        //timeLabel.text = _remainingTime.ToString();
     }
 
 
@@ -164,6 +164,18 @@ public class DailyReward : MonoBehaviour
     //update method to make the progress tick
     void Update()
     {
+        //displaying time
+        if (timerButton.interactable == false)
+        {
+            timeLabel.text = _remainingTime.ToString();
+        }
+        else
+        {
+
+            timeLabel.text = "Play Bonus Level";
+        }
+
+
         if (_timerIsReady)
         {
             if (!_timerComplete && PlayerPrefs.GetString("_timer") != "")
@@ -182,7 +194,11 @@ public class DailyReward : MonoBehaviour
         }
     }
 
-
+    public void LevelReward()
+    {
+        validateTime();
+        _timerComplete = true;
+    }
 
     //validator
     private void validateTime()
