@@ -66,6 +66,7 @@ public class TimeManager : MonoBehaviour
     }
 
     //get the current date - also converting from string to int.
+    //where 12-4-2017 is 1242017
     public int getCurrentDateNow()
     {
         string[] words = _currentDate.Split('-');
@@ -82,4 +83,3 @@ public class TimeManager : MonoBehaviour
 
 
 }
-

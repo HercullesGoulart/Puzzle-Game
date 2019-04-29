@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+ 
 public class DailyReward : MonoBehaviour
 {
     //UI
     public Text timeLabel; //only use if your timer uses a label
-    public Button timerButton; //used to disable button when needed
+    public Button buttonTimer; //used to disable button when needed
     public Image _progress;
     //TIME ELEMENTS
     public int hours; //to set the hours
@@ -24,6 +24,7 @@ public class DailyReward : MonoBehaviour
     //reward to claim
     public int RewardToEarn;
 
+    public GameObject BonusUI;
 
 
 
@@ -31,29 +32,41 @@ public class DailyReward : MonoBehaviour
     //startup
     void Start()
     {
-        if (PlayerPrefs.GetString("_timer") == "")
+
+        if (PlayerPrefs.GetString("_time") == "")
         {
             Debug.Log("==> Enableing button");
             enableButton();
         }
         else
         {
+            disableButton();
             StartCoroutine("CheckTime");
         }
 
+        if (PlayerPrefs.HasKey("UIBonus"))
+        {
+            // Not the first start because pref exists
+            // Don't show help
+            BonusUI.SetActive(true);
+        }
+        else
+        {
+            BonusUI.SetActive(false);
+        }
+
+
     }
-
-
 
     //update the time information with what we got some the internet
     private void updateTime()
     {
-        if (PlayerPrefs.GetString("_timer") == "Standby")
+        if (PlayerPrefs.GetString("_time") == "Standby")
         {
-            PlayerPrefs.SetString("_timer", TimeManager.sharedInstance.getCurrentTimeNow());
+            PlayerPrefs.SetString("_time", TimeManager.sharedInstance.getCurrentTimeNow());
             PlayerPrefs.SetInt("_date", TimeManager.sharedInstance.getCurrentDateNow());
         }
-        else if (PlayerPrefs.GetString("_timer") != "" && PlayerPrefs.GetString("_timer") != "Standby")
+        else if (PlayerPrefs.GetString("_time") != "" && PlayerPrefs.GetString("_time") != "Standby")
         {
             int _old = PlayerPrefs.GetInt("_date");
             int _now = TimeManager.sharedInstance.getCurrentDateNow();
@@ -86,7 +99,7 @@ public class DailyReward : MonoBehaviour
     //update the time information with what we got some the internet
     private void _configTimerSettings()
     {
-        _startTime = TimeSpan.Parse(PlayerPrefs.GetString("_timer"));
+        _startTime = TimeSpan.Parse(PlayerPrefs.GetString("_time"));
         _endTime = TimeSpan.Parse(hours + ":" + minutes + ":" + seconds);
         TimeSpan temp = TimeSpan.Parse(TimeManager.sharedInstance.getCurrentTimeNow());
         TimeSpan diff = temp.Subtract(_startTime);
@@ -119,10 +132,12 @@ public class DailyReward : MonoBehaviour
 
 
     //enable button function
-    public void enableButton()
+    private void enableButton()
     {
-        timerButton.interactable = true;
-        //timeLabel.text = "Play Bonus Level";
+        buttonTimer.interactable = true;
+
+        timeLabel.text = "CLAIM REWARD";
+
     }
 
 
@@ -130,16 +145,17 @@ public class DailyReward : MonoBehaviour
     //disable button function
     private void disableButton()
     {
-        timerButton.interactable = false;
-        //timeLabel.text = _remainingTime.ToString();
+        buttonTimer.interactable = false;
+        timeLabel.text = "Wait for "+_remainingTime.ToString();
+
     }
 
 
     //use to check the current time before completely any task. use this to validate
-    public IEnumerator CheckTime()
+    private IEnumerator CheckTime()
     {
         disableButton();
-        timeLabel.text = "Bonus Level";
+        timeLabel.text = "Checking the time";
         Debug.Log("==> Checking for new time");
         yield return StartCoroutine(
             TimeManager.sharedInstance.getTime()
@@ -155,7 +171,7 @@ public class DailyReward : MonoBehaviour
     {
         Debug.Log("==> Claim Button Clicked");
         claimReward(RewardToEarn);
-        PlayerPrefs.SetString("_timer", "Standby");
+        PlayerPrefs.SetString("_time", "Standby");
         StartCoroutine("CheckTime");
     }
 
@@ -164,18 +180,6 @@ public class DailyReward : MonoBehaviour
     //update method to make the progress tick
     void Update()
     {
-        //displaying time
-        if (timerButton.interactable == false)
-        {
-            timeLabel.text = _remainingTime.ToString();
-        }
-        else
-        {
-
-            timeLabel.text = "Play Bonus Level";
-        }
-
-
         if (_timerIsReady)
         {
             if (!_timerComplete && PlayerPrefs.GetString("_timer") != "")
@@ -191,20 +195,20 @@ public class DailyReward : MonoBehaviour
                     _timerComplete = true;
                 }
             }
+            
         }
+
+
     }
 
-    public void LevelReward()
-    {
-        validateTime();
-        _timerComplete = true;
-    }
+
 
     //validator
     private void validateTime()
     {
         Debug.Log("==> Validating time to make sure no speed hack!");
         StartCoroutine("CheckTime");
+        
     }
 
 

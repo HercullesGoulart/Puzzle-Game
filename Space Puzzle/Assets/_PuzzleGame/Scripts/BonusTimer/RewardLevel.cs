@@ -25,7 +25,7 @@ public class RewardLevel : MonoBehaviour
     void BonusEnabled()
     {
         //player
-        reward.LevelReward();
+        //reward.LevelReward();
         //reward.rewardClicked();
         //GameManager.instance.BonusLevel();
         Debug.Log("bonus enabled");

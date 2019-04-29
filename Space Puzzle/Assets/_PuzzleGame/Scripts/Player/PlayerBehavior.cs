@@ -29,7 +29,7 @@ public class PlayerBehavior : MonoBehaviour
 
     void Start()
     {
-        
+
 
         Pb.BarValue = 0;
 
@@ -223,16 +223,7 @@ public class PlayerBehavior : MonoBehaviour
     {
         GameManager.instance.IncreaseLevel();
 
-        RewardPanel();
-        
-    }
-    public void RewardPanel()
-    {
-        if (PlayerPrefs.GetInt("CurrentLevel".ToString()) >= 5)
-        {
-            rewardPanel.SetActive(true);
-        }
-
     }
 
 }
+

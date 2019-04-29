@@ -43,8 +43,11 @@ public class TacticsMove : MonoBehaviour
 
     public void GetCurrentTile()
     {
+
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
+        
+
     }
 
     public Tile GetTargetTile(GameObject target)
@@ -55,6 +58,7 @@ public class TacticsMove : MonoBehaviour
         if (Physics.Raycast(target.transform.position, -Vector3.up, out hit, 1))
         {
             tile = hit.collider.GetComponent<Tile>();
+            
         }
 
         return tile;

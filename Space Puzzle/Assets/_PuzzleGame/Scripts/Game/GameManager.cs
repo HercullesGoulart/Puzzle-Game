@@ -20,11 +20,9 @@ public class GameManager : MonoBehaviour
     public static Tile instanceTile;
     public bool onFire = false;
     public GameObject bonusBox;
-    DailyReward reward;
 
     void Awake()
     {
-        reward = FindObjectOfType<DailyReward>();
 
         GameAnalytics.Initialize();
 
