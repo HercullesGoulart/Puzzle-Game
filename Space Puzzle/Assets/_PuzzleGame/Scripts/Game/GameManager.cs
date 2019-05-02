@@ -55,7 +55,8 @@ public class GameManager : MonoBehaviour
     {
 
         SceneManager.LoadScene("Bonus");
-
+        Debug.Log("Bonus level loaded");
+        
     }
     public void StartLevel()
     {

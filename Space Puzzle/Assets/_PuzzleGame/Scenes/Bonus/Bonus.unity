@@ -257,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onFire: 0
+  bonusBox: {fileID: 0}
 --- !u!4 &149219240
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,6 +1337,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 95644761328419114, guid: 74ea3d5a0e1650542b8f68c5f433a8c9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 35c9ab857e26f3d4cbd3f82331c294fc, type: 2}
     - target: {fileID: 4872690603670028, guid: 74ea3d5a0e1650542b8f68c5f433a8c9, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -1368,11 +1374,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 95644761328419114, guid: 74ea3d5a0e1650542b8f68c5f433a8c9,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 35c9ab857e26f3d4cbd3f82331c294fc, type: 2}
     - target: {fileID: 135057046775420622, guid: 74ea3d5a0e1650542b8f68c5f433a8c9,
         type: 3}
       propertyPath: m_Radius
@@ -2414,6 +2415,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000005
       objectReference: {fileID: 0}
+    - target: {fileID: 95644761328419114, guid: 74ea3d5a0e1650542b8f68c5f433a8c9,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 35c9ab857e26f3d4cbd3f82331c294fc, type: 2}
     - target: {fileID: 4872690603670028, guid: 74ea3d5a0e1650542b8f68c5f433a8c9, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -2446,11 +2452,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 95644761328419114, guid: 74ea3d5a0e1650542b8f68c5f433a8c9,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 35c9ab857e26f3d4cbd3f82331c294fc, type: 2}
     - target: {fileID: 135057046775420622, guid: 74ea3d5a0e1650542b8f68c5f433a8c9,
         type: 3}
       propertyPath: m_Radius
@@ -3467,10 +3468,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: QuitGame
       objectReference: {fileID: 0}
-    - target: {fileID: 1317779812005362, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 3}
-      propertyPath: m_Name
-      value: IncreaseLvl
-      objectReference: {fileID: 0}
     - target: {fileID: 114996786250481990, guid: 99f4fc269c1896f43be968f0fdeef1f0,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3481,6 +3478,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: IncreaseLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317779812005362, guid: 99f4fc269c1896f43be968f0fdeef1f0, type: 3}
+      propertyPath: m_Name
+      value: IncreaseLvl
       objectReference: {fileID: 0}
     - target: {fileID: 114473458172315446, guid: 99f4fc269c1896f43be968f0fdeef1f0,
         type: 3}
@@ -3738,10 +3739,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 129803564, guid: 46a64bc75a2f57d40b6379f306423ee2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
         type: 3}
       propertyPath: congratulations
@@ -3767,6 +3764,15 @@ PrefabInstance:
       propertyPath: Pb
       value: 
       objectReference: {fileID: 1852873845}
+    - target: {fileID: 114636360876551088, guid: 46a64bc75a2f57d40b6379f306423ee2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129803564, guid: 46a64bc75a2f57d40b6379f306423ee2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6804207926697444112, guid: 46a64bc75a2f57d40b6379f306423ee2,
         type: 3}
       propertyPath: m_IsActive
