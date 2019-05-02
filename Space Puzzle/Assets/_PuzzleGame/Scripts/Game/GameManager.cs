@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public static Tile instanceTile;
-    public bool onFire = false;
+    public bool onFire;
     public GameObject bonusBox;
 
     void Awake()

@@ -45,11 +45,12 @@ public class PlayerBehavior : MonoBehaviour
         //
         if (GameManager.instance.onFire == true)
         {
-
+            
 
             newPlayerMesh[0].SetActive(false);
             newPlayerMesh[1].SetActive(true);
             PlayerPrefs.SetString("CurrentColor", newPlayerMesh[1].ToString());
+            
         }
         else
         {
@@ -120,6 +121,7 @@ public class PlayerBehavior : MonoBehaviour
                 StartCoroutine(EndAnimation());
                 StartCoroutine(EndSceneBonus());
                 GameManager.instance.onFire = true;
+                rewardPanel.SetActive(false);
 
 
             }

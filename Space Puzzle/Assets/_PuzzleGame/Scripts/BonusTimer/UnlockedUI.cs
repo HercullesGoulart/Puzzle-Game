@@ -21,7 +21,10 @@ public class UnlockedUI : MonoBehaviour
         }
         else
         {
+
             bonusUi.SetActive(true);
+
+
         }
     }
     public void UIBonus()
@@ -39,7 +42,7 @@ public class UnlockedUI : MonoBehaviour
             // Create pref
             PlayerPrefs.SetInt("UIBonus", 0);
             PlayerPrefs.Save();
-            
+
             // Show help
         }
     }
@@ -47,6 +50,6 @@ public class UnlockedUI : MonoBehaviour
     {
         SceneManager.LoadScene("Bonus");
     }
-    
+
 
 }
