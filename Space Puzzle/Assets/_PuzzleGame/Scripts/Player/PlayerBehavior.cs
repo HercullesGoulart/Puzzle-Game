@@ -26,10 +26,8 @@ public class PlayerBehavior : MonoBehaviour
     public GameObject rewardPanel;
     public GameObject[] newPlayerMesh;
 
-
     void Start()
     {
-
 
         Pb.BarValue = 0;
 
@@ -45,24 +43,15 @@ public class PlayerBehavior : MonoBehaviour
         //
         if (GameManager.instance.onFire == true)
         {
-            
 
+            Debug.Log("gamemanager on fire");
             newPlayerMesh[0].SetActive(false);
             newPlayerMesh[1].SetActive(true);
-            PlayerPrefs.SetString("CurrentColor", newPlayerMesh[1].ToString());
-            
-        }
-        else
-        {
-            string currentColor = PlayerPrefs.GetString("CurrentColor");
+            PlayerPrefs.SetInt(GameManager.instance.newBall, GameManager.instance.onFire ? 1 : 0);
 
-            //playerRenderer.sharedMaterial.ToString() = currentColor;
         }
 
 
-
-
-        //GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, SceneManager.GetActiveScene().buildIndex.ToString());
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, "World_01", "Stage_01", "Level_Progress"); // without score
     }
     void Update()
@@ -121,7 +110,6 @@ public class PlayerBehavior : MonoBehaviour
                 StartCoroutine(EndAnimation());
                 StartCoroutine(EndSceneBonus());
                 GameManager.instance.onFire = true;
-                rewardPanel.SetActive(false);
 
 
             }

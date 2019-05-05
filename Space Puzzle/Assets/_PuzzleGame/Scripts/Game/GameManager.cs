@@ -19,10 +19,14 @@ public class GameManager : MonoBehaviour
 
     public static Tile instanceTile;
     public bool onFire;
+    public bool getBonus;
     public GameObject bonusBox;
+    public string newBall;
 
     void Awake()
     {
+        this.onFire = PlayerPrefs.GetInt(newBall, 0) > 0 ? true : false;
+
 
         GameAnalytics.Initialize();
 
@@ -93,6 +97,13 @@ public class GameManager : MonoBehaviour
 
 
     }
+    public void CheckBonusMenu()
+    {
+        if (onFire == true)
+        {
+            getBonus = true;
+        }
+    }
     public void JustIncreaseLevel()
     {
         int currentLevel = PlayerPrefs.GetInt("CurrentLevel");
@@ -100,6 +111,7 @@ public class GameManager : MonoBehaviour
         currentLevel++;
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, SceneManager.GetActiveScene().buildIndex.ToString());
+        CheckBonusMenu();
     }
     public void IncreaseLevelAfterBonus()
     {
@@ -107,7 +119,7 @@ public class GameManager : MonoBehaviour
 
         PlayerPrefs.SetInt("CurrentLevel", currentLevel);
         SceneManager.LoadScene(currentLevel);
-
+        CheckBonusMenu();
 
         GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, "World_01", "Stage_01", "Level_Progress");
     }

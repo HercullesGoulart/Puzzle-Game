@@ -54,7 +54,10 @@ public class DailyReward : MonoBehaviour
         {
             BonusUI.SetActive(false);
         }
-
+        if (GameManager.instance.onFire == true)
+        {
+            BonusUI.SetActive(false);
+        }
 
     }
 
@@ -146,7 +149,7 @@ public class DailyReward : MonoBehaviour
     private void disableButton()
     {
         buttonTimer.interactable = false;
-        timeLabel.text = "Wait for "+_remainingTime.ToString();
+        timeLabel.text = "Wait "+_remainingTime.ToString();
 
     }
 
