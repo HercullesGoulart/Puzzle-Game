@@ -149,7 +149,7 @@ public class DailyReward : MonoBehaviour
     private void disableButton()
     {
         buttonTimer.interactable = false;
-        timeLabel.text = "Wait "+_remainingTime.ToString();
+        timeLabel.text = "RETRY TOMORROW";
 
     }
 
